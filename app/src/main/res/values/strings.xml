@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">JWGYM</string>
+
+
+    <string name="password">password</string>
+    <string name="id">ID</string>
+    <string name="login">LOGIN</string>
+    <string name="title">login:</string>
+    <string name="new_trainee_signup_here">new trainee? <u><b>signup here</b></u></string>
+    <string name="continue_as_admin_click_here">Continue as admin. <u><b><i>click here</i></b></u></string>
+    <string name="height_in_meter">Height in meter</string>
+    <string name="weight_in_kg">Weight in KG</string>
+    <string name="age">age</string>
+    <string name="password1">password</string>
+    <string name="name">Name</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_an_account_login">Already have an account? <u><b><i>Login</i></b></u></string>
+    <string name="register">Register</string>
+    <string name="administration">ADMINISTRATION</string>
+    <string name="coaches">Coaches</string>
+    <string name="trainees">Trainees</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO!</string>
+    <string name="enter_the_password">Enter the password</string>
+    <string name="continue1">Continue</string>
+    <string name="continue2">continue</string>
+    <string name="player_height">player height</string>
+    <string name="player_id">player id</string>
+    <string name="player_weight">Player Weight</string>
+    <string name="player_age">player age</string>
+    <string name="player_name">Player Name</string>
+    <string name="type_of_workout">Type of workout</string>
+    <string name="fff">TODO5</string>
+    <string name="welcome_user_for_the_following_app">welcome user for the following app.....</string>
+    <string name="welcome">Welcome</string>
+    <string name="coach_name">coach name</string>
+    <string name="coach_id">coach id</string>
+    <string name="specialization">specialization</string>
+    <string name="salary">salary</string>
+    <string name="add_a_player">Add a player</string>
+    <string name="add">Add</string>
+    <string name="add_a_coach">Add a Coach</string>
+    <string name="coach_name1">Coach Name</string>
+    <string name="set_a_password">set a password</string>
+    <string name="set_a_salary">set a salary</string>
+    <string name="add1">Add</string>
+    <string name="id_or_username">ID or Username</string>
+    <string name="id1">ID</string>
+    <string name="username123">username</string>
+    <string name="todo222">TODO</string>
+    <string name="todo223">TODO</string>
+    <string name="todo224">TODO</string>
+    <string name="profile">Profile</string>
+    <string name="register_renew_registration">Register/Renew Registration</string>
+    <string name="make_your_schedule">Make your Schedule</string>
+    <string name="namep">Name:</string>
+    <string name="idp">ID:</string>
+    <string name="passwordp">Password</string>
+    <string name="agep">Age</string>
+    <string name="heightp">Height</string>
+    <string name="weightp">Weight</string>
+    <string name="genderp">Gender</string>
+    <string name="type_of_workoutp">Type of workout</string>
+    <string name="textviewq">TextView</string>
+    <string name="textvieww">TextView</string>
+    <string name="textviewe">TextView</string>
+    <string name="textviewr">TextView</string>
+    <string name="textviewt">TextView</string>
+    <string name="textviewy">TextView</string>
+    <string name="textviewu">TextView</string>
+    <string name="textviewi">TextView</string>
+    <string name="sunday">Sunday</string>
+    <string name="saturday">Saturday</string>
+    <string name="friday">Friday</string>
+    <string name="thursday">Thursday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="monday">Monday</string>
+    <string name="save_schedule">Save Schedule</string>
+    <string-array name="typeofworkout">
+        <item>Type of Workout</item>
+        <item>BodyBuilding</item>
+        <item>PowerLifting</item>
+        <item>CrossFit</item>
+    </string-array>
+    <string-array name="gender">
+        <item>gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
+    <string-array name="specialization">
+        <item>Specialization</item>
+        <item>BodyBuilding</item>
+        <item>PowerLifting</item>
+        <item>CrossFit</item>
+    </string-array>
+    <string-array name="login">
+        <item>Player</item>
+        <item>Coach</item>
+    </string-array>
+    <string name="title_activity_manage_coach">manageCoach</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="password12">password</string>
+    <string name="login123">Login</string>
+</resources>

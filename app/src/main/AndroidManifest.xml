@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jwgym">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JWGYM">
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".playerViewSched"
+            android:exported="false" />
+        <activity
+            android:name=".player_reg"
+            android:exported="false" />
+        <activity
+            android:name=".player_sched"
+            android:exported="false" />
+        <activity
+            android:name=".player_prof"
+            android:exported="false" />
+        <activity
+            android:name=".managePlayer"
+            android:exported="false" />
+        <activity
+            android:name=".manageCoach"
+            android:exported="false" />
+        <activity
+            android:name=".LogIn"
+            android:exported="false" />
+        <activity
+            android:name=".AfterHandler"
+            android:exported="false" />
+        <activity
+            android:name=".Adminlogin"
+            android:exported="false" />
+        <activity
+            android:name=".administration"
+            android:exported="false" />
+        <activity
+            android:name=".adminAddPlayer"
+            android:exported="false" />
+        <activity
+            android:name=".adminAddCoach"
+            android:exported="false" />
+        <activity
+            android:name=".A2_Player"
+            android:exported="false" />
+        <activity
+            android:name=".A2_Coach"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
