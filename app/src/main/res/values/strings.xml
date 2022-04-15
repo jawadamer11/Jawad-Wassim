@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">JWGYM</string>
-
-
+    <string name="app_name">My Application</string>
     <string name="password">password</string>
     <string name="id">ID</string>
     <string name="login">LOGIN</string>
@@ -99,16 +97,6 @@
     <string-array name="login">
         <item>Player</item>
         <item>Coach</item>
-    </string-array>
-    <string name="title_activity_manage_coach">manageCoach</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="password12">password</string>
-    <string name="login123">Login</string>
+    </string-array>
 </resources>
