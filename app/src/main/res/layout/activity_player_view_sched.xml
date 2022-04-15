@@ -61,13 +61,14 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/tx1"
+
+            android:id="@+id/q1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -88,13 +89,14 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/tx2"
+
+            android:id="@+id/q2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -115,13 +117,14 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/tx3"
+
+            android:id="@+id/q3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -142,13 +145,14 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/tx4"
+
+            android:id="@+id/q4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -169,13 +173,14 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/tx5"
+
+            android:id="@+id/q5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -196,14 +201,15 @@
             android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
-            android:id="@+id/tx6"
+
+            android:id="@+id/q6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
     <TableRow
@@ -224,13 +230,14 @@
             android:fontFamily="sans-serif-condensed-medium" />
 
         <TextView
-            android:id="@+id/tx7"
+
+            android:id="@+id/q7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
             android:padding="7sp"
-            android:text="TextView"
-            android:layout_marginLeft="120dp" />
+            android:text="TextView" />
     </TableRow>
 
 </TableLayout>

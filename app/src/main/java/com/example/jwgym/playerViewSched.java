@@ -18,9 +18,9 @@ public class playerViewSched extends AppCompatActivity {
 
 
 
-        tx1=findViewById(R.id.tx1); tx2=findViewById(R.id.tx2); tx3=findViewById(R.id.tx3);
-        tx4=findViewById(R.id.tx4); tx5=findViewById(R.id.tx5); tx6=findViewById(R.id.tx6);
-        tx7=findViewById(R.id.tx7);
+        tx1=findViewById(R.id.q1); tx2=findViewById(R.id.q2); tx3=findViewById(R.id.q3);
+        tx4=findViewById(R.id.q4); tx5=findViewById(R.id.q5); tx6=findViewById(R.id.q6);
+        tx7=findViewById(R.id.q7);
 
         Intent intent1 = getIntent();
         a1= intent1.getStringExtra("s1");
