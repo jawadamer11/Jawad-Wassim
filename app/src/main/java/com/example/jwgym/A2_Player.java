@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class A2_Player extends AppCompatActivity {
     FloatingActionButton profile, reg, sched;
-    String n;
+    String n,p;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +26,11 @@ public class A2_Player extends AppCompatActivity {
         profile.setOnClickListener(v -> {
             Intent j = getIntent();
             n = j.getStringExtra("seat1");
+            p = j.getStringExtra("userpass");
 
             Intent i1 = new Intent(getApplicationContext(),player_prof.class);
             i1.putExtra("seat2",n+"");
+            i1.putExtra("userpass",p);
             startActivity(i1);
         });
         reg.setOnClickListener(v -> {

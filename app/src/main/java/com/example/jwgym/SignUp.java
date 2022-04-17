@@ -19,7 +19,7 @@ public class SignUp extends AppCompatActivity {
     TextView signlog;
     Spinner typespinner, genderspinner;
     Button signregister;
-    String URL = test.getURL();
+    String URL = Test.getURL();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -26,7 +26,7 @@ public class LogIn extends AppCompatActivity {
     EditText logname, logpass;
     JSONArray data;
     TextView logsignup, admin;
-    String etname,etpass, spinner,URL = test.getURL();
+    String etname,etpass, spinner,URL = Test.getURL();
     Spinner spinner2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,16 +56,20 @@ public class LogIn extends AppCompatActivity {
             startActivity(i);
             finish();
         });
+
         logbtn.setOnClickListener(v -> Login());
 
     }
     public void Login(){
         etname = logname.getText().toString();
         etpass = logpass.getText().toString();
+        Intent j = new Intent(getApplicationContext(),player_prof.class);
+
+
         spinner = spinner2.getSelectedItem().toString();
 
         if(spinner.equals("Player")){
-            String url = URL+"/loginnn.php?p_name="+etname+"&p_password="+etpass;
+            String url = URL+"/getPlayerById.php?p_name="+etname+"&p_password="+etpass;
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
 
@@ -74,6 +78,7 @@ public class LogIn extends AppCompatActivity {
 
                     Intent i = new Intent(getApplicationContext(), A2_Player.class);
                     i.putExtra("seat1", etname+"");
+                    i.putExtra("userpass",etpass);
                     startActivity(i);
 
 

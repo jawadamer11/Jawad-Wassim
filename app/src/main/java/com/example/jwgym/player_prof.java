@@ -39,15 +39,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_prof extends AppCompatActivity {
-    TextView pname,id,height,weight,age,gender,typeofworkout,password;
-    String pnameT,idT,heightT,weightT,ageT,genderT,typeOfT,passswordT;
-int p;
+    TextView pname,id,height,weight,age,tvid,typeofworkout,password;
+    String pnameT,idT,heightT,weightT,ageT,genderT,typeOfT,passswordT,p,n;
+//int p;
 
     JSONArray data;
 
-    int i;
+    String ID;
     Button btnshow;
-    private String strJson, Url=test.getURL();
+    private String strJson, Url=Test.getURL();
     private RequestQueue rq;
     /*private OkHttpClient client;
     private Response response;
@@ -70,19 +70,62 @@ int p;
         age = (TextView)findViewById(R.id.age);
         typeofworkout = (TextView)findViewById(R.id.workout);
         password =(TextView) findViewById(R.id.password);
-        //btnshow =(Button) findViewById(R.id.button);
-
-
+        tvid = findViewById(R.id.id);
 
         rq = Volley.newRequestQueue(this);
+        Test test = new Test();
+
+        Intent i1 = getIntent();
+        n = i1.getStringExtra("seat2");
+        p = i1.getStringExtra("userpass");
 
 
-        getPname();
-        getppassword();
-        getheight();
-        getwight();
-        getage();
-        gettypeof();
+
+
+
+        String url = Url+"/playerdetail/getID.php?p_name="+n+"&p_password="+p;
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+
+                String value = response.trim();
+                //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
+                Test.setId(value);
+                tvid.setText(Test.getId());
+                ID=value;
+
+                getPname();
+                getppassword();
+                getheight();
+                getwight();
+                getage();
+                gettypeof();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),"error: "+error.toString(),Toast.LENGTH_LONG).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                //params.put("UserName",logname.getText().toString().trim());
+                //params.put("Password",logpass.getText().toString().trim());
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+
+
+
+        //  return ID;
+
+        //pname.setText(ID+"");
+       //
 
 
 
@@ -120,12 +163,51 @@ int p;
 
 
     }
+
+    public void getID(){
+
+        String url = Url+"/playerdetail/getID.php?p_name="+n+"&p_password="+p;
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+
+                String value = response.trim();
+                //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
+                Test.setId(value);
+                tvid.setText(Test.getId());
+
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(),"error: "+error.toString(),Toast.LENGTH_LONG).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                //params.put("UserName",logname.getText().toString().trim());
+                //params.put("Password",logpass.getText().toString().trim());
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+
+
+      //  return ID;
+    }
+
+
     public void getPname(){
 
 
 
 
-        String url = Url+"/playerdetail/p_name.php?id=2";
+        String url = Url+"/playerdetail/p_name.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -164,7 +246,7 @@ int p;
 
 
 
-        String url = Url+"/playerdetail/p_password.php?id=2";
+        String url = Url+"/playerdetail/p_password.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -203,7 +285,7 @@ int p;
 
 
 
-        String url = Url+"/playerdetail/height.php?id=2";
+        String url = Url+"/playerdetail/height.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -242,7 +324,7 @@ int p;
 
 
 
-        String url = Url+"/playerdetail/weight.php?id=2";
+        String url = Url+"/playerdetail/weight.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -281,7 +363,7 @@ int p;
 
 
 
-        String url = Url+"/playerdetail/age.php?id=2";
+        String url = Url+"/playerdetail/age.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -320,7 +402,7 @@ int p;
 
 
 
-        String url =Url+ "/playerdetail/typeOfWorkout.php?id=2";
+        String url =Url+ "/playerdetail/typeOfWorkout.php?id="+ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
