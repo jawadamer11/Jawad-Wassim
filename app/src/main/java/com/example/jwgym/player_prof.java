@@ -41,7 +41,7 @@ import java.util.Map;
 public class player_prof extends AppCompatActivity {
     TextView pname,id,height,weight,age,gender,typeofworkout,password;
     String pnameT,idT,heightT,weightT,ageT,genderT,typeOfT,passswordT;
-
+int p;
 
     JSONArray data;
 
