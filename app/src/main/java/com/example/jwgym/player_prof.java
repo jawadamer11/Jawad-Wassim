@@ -47,7 +47,7 @@ public class player_prof extends AppCompatActivity {
 
     int i;
     Button btnshow;
-    private String strJson, Url="http://192.168.0.107/ceng495/playerInfo.php";
+    private String strJson, Url="http://192.168.0.109/ceng495/playerInfo.php";
     private RequestQueue rq;
     /*private OkHttpClient client;
     private Response response;
