@@ -26,7 +26,7 @@ public class LogIn extends AppCompatActivity {
     EditText logname, logpass;
     JSONArray data;
     TextView logsignup, admin;
-    String etname,etpass, spinner;
+    String etname,etpass, spinner,URL = test.getURL();
     Spinner spinner2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class LogIn extends AppCompatActivity {
         spinner = spinner2.getSelectedItem().toString();
 
         if(spinner.equals("Player")){
-            String url = "http://192.168.0.109/ceng495/getPlayerById.php?p_name="+etname+"&p_password="+etpass;
+            String url = URL+"/loginnn.php?p_name="+etname+"&p_password="+etpass;
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
 
@@ -94,7 +94,7 @@ public class LogIn extends AppCompatActivity {
             requestQueue.add(stringRequest);
         }
         if(spinner.equals("Coach")){
-            String url = "http://192.168.0.109/ceng495/getCoachById.php?c_name="+etname+"&c_password="+etpass;
+            String url = URL+"/getCoachById.php?c_name="+etname+"&c_password="+etpass;
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
 
