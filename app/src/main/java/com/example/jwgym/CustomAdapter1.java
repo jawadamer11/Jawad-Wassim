@@ -24,7 +24,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CustomAdapter1 extends BaseAdapter {
-
+    TextView playern,playert,playeri,playera, playerw, playerh, playerg;
+    ImageButton ImageButton;
     Context con;
     JSONArray data;
     LayoutInflater inflater;
@@ -35,8 +36,7 @@ public class CustomAdapter1 extends BaseAdapter {
         inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     public class Holder {
-        TextView playern,playert,playeri,playera, playerw, playerh, playerg;
-        ImageButton ImageButton;
+
     }
     @Override
     public int getCount() {
@@ -59,31 +59,31 @@ public class CustomAdapter1 extends BaseAdapter {
         final View rowView;
         rowView = inflater.inflate(R.layout.row1,null);
 
-        holder.playeri = rowView.findViewById(R.id.playeri);
-        holder.playern = rowView.findViewById(R.id.playern);
-        holder.playert = rowView.findViewById(R.id.playert);
-        holder.playera = rowView.findViewById(R.id.playera);
-        holder.playerh = rowView.findViewById(R.id.playerh);
-        holder.playerw = rowView.findViewById(R.id.playerw);
-        holder.playerg = rowView.findViewById(R.id.playerg);
+        playeri = rowView.findViewById(R.id.playeri);
+        playern = rowView.findViewById(R.id.playern);
+        playert = rowView.findViewById(R.id.playert);
+        playera = rowView.findViewById(R.id.playera);
+        playerh = rowView.findViewById(R.id.playerh);
+        playerw = rowView.findViewById(R.id.playerw);
+        playerg = rowView.findViewById(R.id.playerg);
 
-        holder.ImageButton = rowView.findViewById(R.id.imageButton);
+        ImageButton = rowView.findViewById(R.id.imageButton);
 
         JSONObject obj = data.optJSONObject(i);
         try {
-            holder.playern.setText(obj.getString("p_name"));
-            holder.playeri.setText(obj.getString("p_id"));
-            holder.playera.setText(obj.getString("age"));
-            holder.playerw.setText(obj.getString("weight"));
-            holder.playerh.setText(obj.getString("height"));
-            holder.playerg.setText(obj.getString("gender"));
-            holder.playert.setText(obj.getString("typeOfWorkout"));
-            holder.ImageButton.setTag(obj.getString("p_id"));
+            playeri.setText(obj.getString("p_id"));
+            playern.setText(obj.getString("p_name"));
+            playert.setText(obj.getString("typeOfWorkout"));
+            playera.setText(obj.getString("age"));
+            playerh.setText(obj.getString("height"));
+            playerw.setText(obj.getString("weight"));
+            playerg.setText(obj.getString("gender"));
+            ImageButton.setTag(obj.getString("p_id"));
 
-            holder.ImageButton.setOnClickListener(new View.OnClickListener() {
+            ImageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = URL+"/deletePlayer.php?p_id="+holder.ImageButton.getTag();
+                    String url = URL+"/deletePlayer.php?p_id="+ImageButton.getTag();
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
