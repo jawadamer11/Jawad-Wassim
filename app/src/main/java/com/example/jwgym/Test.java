@@ -4,12 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Test extends AppCompatActivity {
-    static String URL = "http://192.168.0.108/ceng495";
+    static String URL = "http://192.168.43.233/ceng495";
     static String id ;
 
     public Test() {
     }
-
 
     public Test(String id) {
         id = this.id;

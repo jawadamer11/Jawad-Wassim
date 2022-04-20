@@ -46,7 +46,7 @@ public class adminAddCoach extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), "All fields are required", Toast.LENGTH_SHORT).show();
                 } else {
-                    String url = "http://192.168.0.109/ceng495/addCoach.php?c_name=" + name + "&specilization=" + specialization +
+                    String url = "http://192.168.0.106/ceng495/addCoach.php?c_name=" + name + "&specilization=" + specialization +
                             "&salary=" + salary + "&c_password=" + pw;
 
                     RequestQueue queue = Volley.newRequestQueue(getApplicationContext());

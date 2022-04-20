@@ -1,16 +1,9 @@
 package com.example.jwgym;
 
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +12,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -31,45 +22,30 @@ import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;*/
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class player_prof extends AppCompatActivity {
-    TextView pname,id,height,weight,age,tvid,typeofworkout,password;
-    String pnameT,idT,heightT,weightT,ageT,genderT,typeOfT,passswordT,p,n;
-//int p;
-
+    TextView pname,height,weight,age,tvid,typeofworkout,password;
+    String p,n;
     JSONArray data;
-
     String ID;
-    Button btnshow;
     private String strJson, Url=Test.getURL();
     private RequestQueue rq;
-    /*private OkHttpClient client;
-    private Response response;
-    private RequestBody requestBody;
-    private Request request;*/
-    //private ProgressDialog progressDialog;
-    // private static final String Base_URL = "http://192.168.0.7/ceng495/playerInfo.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_prof);
-        // progressDialog = new ProgressDialog(this);
-        // progressDialog.setTitle("Pleasee wait");
-        // progressDialog.setCanceledOnTouchOutside(false);
 
-        pname = (TextView) findViewById(R.id.username);
-        height = (TextView) findViewById(R.id.height);
+
+        pname = (TextView) findViewById(R.id.username_c);
+        height = (TextView) findViewById(R.id.salary);
         weight =(TextView) findViewById(R.id.weight);
-        age = (TextView)findViewById(R.id.age);
-        typeofworkout = (TextView)findViewById(R.id.workout);
-        password =(TextView) findViewById(R.id.password);
+        age = (TextView)findViewById(R.id.spec);
+        typeofworkout = (TextView)findViewById(R.id.id_c);
+        password =(TextView) findViewById(R.id.password_c);
         tvid = findViewById(R.id.id);
 
         rq = Volley.newRequestQueue(this);
@@ -91,7 +67,6 @@ public class player_prof extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String value = response.trim();
-                //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
                 Test.setId(value);
                 tvid.setText(Test.getId());
                 ID=value;

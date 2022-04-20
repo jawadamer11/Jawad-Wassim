@@ -1,5 +1,7 @@
 package com.example.jwgym;
 
+import static com.example.jwgym.Test.URL;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -74,7 +76,7 @@ public class CustomAdapter2 extends BaseAdapter {
             holder.ImageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = "http://192.168.0.109/ceng495/deleteCoach.php?c_id="+holder.ImageButton.getTag();
+                    String url = URL+"/deleteCoach.php?c_id="+holder.ImageButton.getTag();
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override

@@ -105,7 +105,9 @@ public class LogIn extends AppCompatActivity {
 
                 if(response.trim().equals("success")){
                     Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(LogIn.this,A2_Coach.class);
+                    Intent i = new Intent(getApplicationContext(), A2_Coach.class);
+                    i.putExtra("seat1", etname+"");
+                    i.putExtra("userpass",etpass);
                     startActivity(i);
 
 
