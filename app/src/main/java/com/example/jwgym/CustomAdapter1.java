@@ -80,11 +80,12 @@ public class CustomAdapter1 extends BaseAdapter {
             holder.playerw.setText(obj.getString("weight"));
             holder.playerg.setText(obj.getString("gender"));
             holder.img.setTag(obj.getInt("p_id"));
-
+            int pid = (int) holder.img.getTag();
             holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = URL+"/deletePlayer.php?p_id="+holder.img.getTag();
+
+                    String url = URL+"/deletePlayer.php?p_id="+pid;
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
