@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +25,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CustomAdapter1 extends BaseAdapter {
-    TextView playern,playert,playeri,playera, playerw, playerh, playerg;
-    ImageButton ImageButton;
+
     Context con;
     JSONArray data;
     LayoutInflater inflater;
@@ -33,13 +33,15 @@ public class CustomAdapter1 extends BaseAdapter {
     public CustomAdapter1(Context c, JSONArray data){
         this.con = c;
         this.data = data;
-        inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     public class Holder {
-
+        TextView playern,playert,playeri,playera, playerw, playerh, playerg;
+        ImageView img;
     }
     @Override
     public int getCount() {
+
         return data.length();
     }
     @Override
@@ -52,38 +54,37 @@ public class CustomAdapter1 extends BaseAdapter {
     public long getItemId(int i) {
         return 0;
     }
-    @SuppressLint({"ViewHolder", "InflateParams"})
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         final Holder holder = new Holder();
         final View rowView;
         rowView = inflater.inflate(R.layout.row1,null);
 
-        playeri = rowView.findViewById(R.id.playeri);
-        playern = rowView.findViewById(R.id.playern);
-        playert = rowView.findViewById(R.id.playert);
-        playera = rowView.findViewById(R.id.playera);
-        playerh = rowView.findViewById(R.id.playerh);
-        playerw = rowView.findViewById(R.id.playerw);
-        playerg = rowView.findViewById(R.id.playerg);
+        holder.playeri = rowView.findViewById(R.id.playeri);
+        holder.playern = rowView.findViewById(R.id.playern);
+        holder.playert = rowView.findViewById(R.id.playert);
+        holder.playera = rowView.findViewById(R.id.playera);
+        holder.playerh = rowView.findViewById(R.id.playerh);
+        holder.playerw = rowView.findViewById(R.id.playerw);
+        holder.playerg = rowView.findViewById(R.id.playerg);
 
-        ImageButton = rowView.findViewById(R.id.imageButton);
+        holder.img = rowView.findViewById(R.id.img);
 
         JSONObject obj = data.optJSONObject(i);
         try {
-            playeri.setText(obj.getString("p_id"));
-            playern.setText(obj.getString("p_name"));
-            playert.setText(obj.getString("typeOfWorkout"));
-            playera.setText(obj.getString("age"));
-            playerh.setText(obj.getString("height"));
-            playerw.setText(obj.getString("weight"));
-            playerg.setText(obj.getString("gender"));
-            ImageButton.setTag(obj.getString("p_id"));
+            holder.playeri.setText(obj.getString("p_id"));
+            holder.playern.setText(obj.getString("p_name"));
+            holder.playert.setText(obj.getString("typeOfWorkout"));
+            holder.playera.setText(obj.getString("age"));
+            holder.playerh.setText(obj.getString("height"));
+            holder.playerw.setText(obj.getString("weight"));
+            holder.playerg.setText(obj.getString("gender"));
+            holder.img.setTag(obj.getInt("p_id"));
 
-            ImageButton.setOnClickListener(new View.OnClickListener() {
+            holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = URL+"/deletePlayer.php?p_id="+ImageButton.getTag();
+                    String url = URL+"/deletePlayer.php?p_id="+holder.img.getTag();
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override

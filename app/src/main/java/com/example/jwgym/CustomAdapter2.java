@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class CustomAdapter2 extends BaseAdapter {
     }
     public static class Holder {
         TextView coachn,coachsp,coachi,coachsa;
-        ImageButton ImageButton;
+        ImageView img;
     }
     @Override
     public int getCount() {
@@ -62,7 +63,7 @@ public class CustomAdapter2 extends BaseAdapter {
         holder.coachi = rowView.findViewById(R.id.coachi);
         holder.coachsp = rowView.findViewById(R.id.coachsp);
         holder.coachsa = rowView.findViewById(R.id.coachsa);
-        holder.ImageButton = rowView.findViewById(R.id.imageButton);
+        holder.img = rowView.findViewById(R.id.img);
 
         JSONObject obj = data.optJSONObject(i);
         try {
@@ -71,12 +72,12 @@ public class CustomAdapter2 extends BaseAdapter {
             holder.coachsa.setText(obj.getString("salary"));
             holder.coachsp.setText(obj.getString("specilization"));
 
-            holder.ImageButton.setTag(obj.getString("c_id"));
+            holder.img.setTag(obj.getInt("c_id"));
 
-            holder.ImageButton.setOnClickListener(new View.OnClickListener() {
+            holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String url = URL+"/deleteCoach.php?c_id="+holder.ImageButton.getTag();
+                    String url = URL+"/deleteCoach.php?c_id="+holder.img.getTag();
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override

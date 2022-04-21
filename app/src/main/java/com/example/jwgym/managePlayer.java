@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -29,6 +31,7 @@ public class managePlayer extends AppCompatActivity {
         setContentView(R.layout.activity_manage_player);
 
 
+        getdatafromdb();
 
         list = findViewById(R.id.list);
         addpl = findViewById(R.id.addpl);
@@ -52,15 +55,20 @@ public class managePlayer extends AppCompatActivity {
 
     public void getdatafromdb(){
         String url = URL+"/getallplayers.php";
-        RequestQueue queue = Volley.newRequestQueue(this);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
-                (Request.Method.GET, url, null, response -> {
-                    data = response;
-                    cust_adapater = new CustomAdapter1(getApplicationContext(),data);
-                    list.setAdapter(cust_adapater);
-                }, error -> {
-                    // TODO: Handle error
-                    Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+                            @Override
+                            public void onResponse(JSONArray response) {
+                              //  data = response;
+                                cust_adapater = new CustomAdapter1(getApplicationContext(),response);
+                                list.setAdapter(cust_adapater);
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // TODO: Handle error
+                        Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+                    }
                 });
         queue.add(jsonArrayRequest);
     }

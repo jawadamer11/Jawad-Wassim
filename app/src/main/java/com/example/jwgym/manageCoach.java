@@ -1,5 +1,7 @@
 package com.example.jwgym;
 
+import static com.example.jwgym.Test.URL;
+
 import android.content.Intent;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -49,7 +51,7 @@ public class manageCoach extends AppCompatActivity {
         super.onResume();
     }
     public void getdatafromdb(){
-        String url = "http://192.168.0.109/ceng495/getallcoaches.php";
+        String url = URL+"/getallcoaches.php";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url, null, response -> {

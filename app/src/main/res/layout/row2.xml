@@ -5,85 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/coachn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/coach_name"
-        app:layout_constraintBottom_toTopOf="@+id/coachsa"
-        app:layout_constraintEnd_toStartOf="@+id/coachi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/coachi"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginRight="90dp"
-        android:layout_marginBottom="15dp"
-        android:text="@string/coach_id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/coachsp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintStart_toEndOf="@+id/coachn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coachn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/coachsp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginRight="182dp"
-        android:layout_marginBottom="547dp"
-        android:text="@string/specialization"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coachsa"
-        app:layout_constraintTop_toBottomOf="@+id/coachi" />
-
-    <TextView
-        android:id="@+id/coachsa"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="548dp"
-        android:text="@string/salary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/coachsp"
-        app:layout_constraintEnd_toStartOf="@+id/coachsp"
-        app:layout_constraintStart_toEndOf="@+id/coachn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coachn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="109dp"
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
-        android:contentDescription="@string/fff"
         android:foreground="@android:drawable/ic_menu_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coachi"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_delete"
-        tools:ignore="ImageContrastCheck"
-        tools:targetApi="m" />
+        app:layout_constraintVertical_bias="0.095"
+        tools:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+    <TableLayout
+        android:layout_width="184dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/coachn"
+                android:layout_width="107dp"
+                android:layout_height="28dp"
+                android:text="@string/coach_name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/coachi"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:text="@string/coach_id" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/coachsp"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="@string/specialization" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/coachsa"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="@string/salary" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
