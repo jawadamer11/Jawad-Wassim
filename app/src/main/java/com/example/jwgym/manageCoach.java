@@ -40,6 +40,7 @@ public class manageCoach extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),adminAddCoach.class);
                 startActivity(i);
                 finish();
+
             }
         });
 

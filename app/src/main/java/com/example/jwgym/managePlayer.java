@@ -62,6 +62,7 @@ public class managePlayer extends AppCompatActivity {
                               //  data = response;
                                 cust_adapater = new CustomAdapter1(getApplicationContext(),response);
                                 list.setAdapter(cust_adapater);
+
                             }
                         }, new Response.ErrorListener() {
                     @Override
