@@ -22,8 +22,8 @@
 
     <TableLayout
 
-        android:layout_width="219dp"
-        android:layout_height="279dp"
+        android:layout_width="307dp"
+        android:layout_height="349dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img"
         app:layout_constraintHorizontal_bias="0.19"
@@ -36,15 +36,28 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/playern"
-                android:layout_width="72dp"
-                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="@string/player_name" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/playeri"
@@ -58,6 +71,12 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/playera"
                 android:layout_width="110dp"
                 android:layout_height="40dp"
@@ -67,6 +86,12 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/playerh"
@@ -80,6 +105,12 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/playerg"
                 android:layout_width="110dp"
                 android:layout_height="40dp"
@@ -91,6 +122,12 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/playert"
                 android:layout_width="110dp"
                 android:layout_height="37dp"
@@ -100,6 +137,12 @@
         <TableRow
             android:layout_width="139dp"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/playerw"

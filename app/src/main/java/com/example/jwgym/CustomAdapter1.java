@@ -93,6 +93,7 @@ public class CustomAdapter1 extends BaseAdapter {
 
                             if(response.equals("success")){
 
+
                                 ((managePlayer)con).onResume();
                             }
                             else {
