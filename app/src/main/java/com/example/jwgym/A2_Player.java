@@ -36,7 +36,7 @@ public class A2_Player extends AppCompatActivity {
         reg.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), player_reg.class);
             startActivity(i);
-            finish();
+
         });
         sched.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), player_sched.class);

@@ -1,7 +1,9 @@
 package com.example.jwgym;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -27,7 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_prof extends AppCompatActivity {
-    TextView pname,height,weight,age,tvid,typeofworkout,password;
+    TextView pname,height,weight,age,tvid,typeofworkout,password,logout;
     String p,n;
     JSONArray data;
     String ID;
@@ -47,13 +49,32 @@ public class player_prof extends AppCompatActivity {
         typeofworkout = (TextView)findViewById(R.id.id_c);
         password =(TextView) findViewById(R.id.password_c);
         tvid = findViewById(R.id.id);
+        logout = findViewById(R.id.logout);
 
         rq = Volley.newRequestQueue(this);
         Test test = new Test();
 
-        Intent i1 = getIntent();
+        /*Intent i1 = getIntent();
         n = i1.getStringExtra("seat2");
-        p = i1.getStringExtra("userpass");
+        p = i1.getStringExtra("userpass");*/
+
+        logout.setOnClickListener(v -> {
+            SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            editor.putBoolean("hasLoggedIn",false);
+            editor.clear();
+            editor.commit();
+            Intent i = new Intent(getApplicationContext(),LogIn.class);
+            startActivity(i);
+            finish();
+
+        });
+
+
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
+         n = sp.getString("username","");
+         p = sp.getString("password","");
 
 
 

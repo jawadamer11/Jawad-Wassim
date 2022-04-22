@@ -4,15 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Jawad-Wassim/app/src/main/res/layout/activity_player_prof.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Jawad-Wassim/app/src/main/res/layout/activity_player_reg.xml" value="0.25" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/drawable/spinner.xml" value="0.202" />
-        <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_a2_coach.xml" value="0.1621376811594203" />
-        <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_a2_player.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_admin_add_player.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_coach_prof.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_custom_adapter1.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_log_in.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_player_prof.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_player_sched.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/activity_player_view_sched.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/o/AndroidStudioProjects/JWGYM/app/src/main/res/layout/row1.xml" value="0.22826086956521738" />

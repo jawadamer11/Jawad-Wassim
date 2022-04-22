@@ -1,6 +1,8 @@
 package com.example.jwgym;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LogIn extends AppCompatActivity {
+    public static final String PREFS_NAME = "MyPrefsFile";
     Button logbtn;
     EditText logname, logpass;
     JSONArray data;
@@ -69,6 +72,13 @@ public class LogIn extends AppCompatActivity {
         spinner = spinner2.getSelectedItem().toString();
 
         if(spinner.equals("Player")){
+
+            SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            editor.putBoolean("hasLoggedIn",true);
+            editor.commit();
+
             String url = URL+"/getPlayerById.php?p_name="+etname+"&p_password="+etpass;
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
@@ -77,8 +87,13 @@ public class LogIn extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
 
                     Intent i = new Intent(getApplicationContext(), A2_Player.class);
-                    i.putExtra("seat1", etname+"");
-                    i.putExtra("userpass",etpass);
+                    SharedPreferences sp = getSharedPreferences("userdetails", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor1 = sp.edit();
+                    editor1.putString("username",etname);
+                    editor1.putString("password",etpass);
+                    //i.putExtra("seat1", etname+"");
+                    //i.putExtra("userpass",etpass);
+                    editor1.commit();
                     startActivity(i);
 
 
