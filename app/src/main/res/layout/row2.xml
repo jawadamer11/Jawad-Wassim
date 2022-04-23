@@ -21,6 +21,7 @@
 
     <TableLayout
         android:layout_width="184dp"
+        app:layout_goneMarginStart="20dp"
         android:layout_height="118dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
@@ -38,6 +39,8 @@
             <TextView
                 android:id="@+id/coachn"
                 android:layout_width="107dp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:layout_height="28dp"
                 android:text="@string/coach_name" />
         </TableRow>
@@ -48,6 +51,8 @@
 
             <TextView
                 android:id="@+id/coachi"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:layout_width="135dp"
                 android:layout_height="30dp"
                 android:text="@string/coach_id" />
@@ -60,6 +65,8 @@
             <TextView
                 android:id="@+id/coachsp"
                 android:layout_width="90dp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:layout_height="30dp"
                 android:text="@string/specialization" />
         </TableRow>
@@ -70,6 +77,8 @@
 
             <TextView
                 android:id="@+id/coachsa"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:text="@string/salary" />

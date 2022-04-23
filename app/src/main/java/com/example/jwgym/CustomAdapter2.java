@@ -86,7 +86,7 @@ public class CustomAdapter2 extends BaseAdapter {
                             if(response.equals("success")){
 
 
-                                ((managePlayer)con).onResume();
+                                ((manageCoach)con).onResume();
                             }
                             else {
                                 Toast.makeText(con, "Delete failed.", Toast.LENGTH_SHORT).show();

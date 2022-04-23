@@ -1,5 +1,7 @@
 package com.example.jwgym;
 
+import static com.example.jwgym.Test.URL;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -50,7 +52,7 @@ public class adminAddPlayer extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "All fields are required", Toast.LENGTH_SHORT).show();
             } else {
-                String url = "http://192.168.0.109/ceng495/addplayer.php?p_name=" + name + "&typeOfWorkout=" + type +
+                String url = URL+"/addplayer.php?p_name=" + name + "&typeOfWorkout=" + type +
                         "&age=" + age + "&height=" + height + "&weight=" + weight + "&gender=" + gender + "&p_password=" + pw;
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());

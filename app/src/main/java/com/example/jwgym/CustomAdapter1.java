@@ -91,8 +91,9 @@ public class CustomAdapter1 extends BaseAdapter {
                         @Override
                         public void onResponse(String response) {
 
-                            if(response.equals("success")){
-
+                            if(response=="success"){
+                                Toast.makeText(con.getApplicationContext(),
+                                        "player with ID:"+pid+" is deleted from the list",Toast.LENGTH_LONG).show();
 
                                 ((managePlayer)con).onResume();
                             }
