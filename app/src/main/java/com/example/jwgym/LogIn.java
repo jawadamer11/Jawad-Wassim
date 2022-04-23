@@ -91,8 +91,6 @@ public class LogIn extends AppCompatActivity {
                     SharedPreferences.Editor editor1 = sp.edit();
                     editor1.putString("username",etname);
                     editor1.putString("password",etpass);
-                    //i.putExtra("seat1", etname+"");
-                    //i.putExtra("userpass",etpass);
                     editor1.commit();
                     startActivity(i);
 

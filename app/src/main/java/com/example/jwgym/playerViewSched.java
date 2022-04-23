@@ -18,7 +18,7 @@ import com.android.volley.toolbox.Volley;
 public class playerViewSched extends AppCompatActivity {
     String a1,b1,c1,d1,e1,f1,g1;
     TextView tx1,tx2,tx3,tx4,tx5,tx6,tx7;
-    String x;
+    String x, a,b,c,d,e,f,g;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +46,14 @@ public class playerViewSched extends AppCompatActivity {
         tx7.setText(g1);
 
 
+        SharedPreferences sp1 = getApplicationContext().getSharedPreferences("playerSchedule", Context.MODE_PRIVATE);
+        a = sp1.getString("monday_session","");
+        b = sp1.getString("tuesday_session","");
+        c = sp1.getString("wednesday_session","");
+        d = sp1.getString("thursday_session","");
+        e = sp1.getString("friday_session","");
+        f = sp1.getString("saturday_session","");
+        g = sp1.getString("sunday_session","");
 
 
 

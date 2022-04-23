@@ -26,21 +26,22 @@ import java.util.Locale;
 public class player_sched extends AppCompatActivity {
     CheckBox mon, tue, wed, thur, fri, sat, sun;
     TextView t1, t2, t3, t4, t5, t6, t7;
-    Button button2;
+    Button button5, button4;
     int hour, min;
     String x;
     String p, f, Day, a, b, c, d, e, g, q;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_player_sched);
+        setContentView(R.layout.player_sched);
 
 
 
 
 
 
-        button2=findViewById(R.id.button2);
+        button4=findViewById(R.id.button4);
+        button5=findViewById(R.id.button5);
         mon = findViewById(R.id.mon);
         tue = findViewById(R.id.tue);
         wed = findViewById(R.id.wed);
@@ -48,13 +49,13 @@ public class player_sched extends AppCompatActivity {
         fri = findViewById(R.id.fri);
         sat = findViewById(R.id.sat);
         sun = findViewById(R.id.sun);
-        t1 = findViewById(R.id.t1);
-        t2 = findViewById(R.id.t2);
-        t3 = findViewById(R.id.t3);
-        t4 = findViewById(R.id.t4);
-        t5 = findViewById(R.id.t5);
-        t6 = findViewById(R.id.t6);
-        t7 = findViewById(R.id.t7);
+        t1 = findViewById(R.id.textView1);
+        t2 = findViewById(R.id.textView2);
+        t3 = findViewById(R.id.textView3);
+        t4 = findViewById(R.id.textView4);
+        t5 = findViewById(R.id.textView5);
+        t6 = findViewById(R.id.textView6);
+        t7 = findViewById(R.id.textView7);
 
 
         mon.setOnClickListener(new View.OnClickListener() {
@@ -246,17 +247,37 @@ public class player_sched extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                  a=t1.getText().toString();
                  b=t2.getText().toString();
-                c=t3.getText().toString();
-                d=t4.getText().toString();
+                 c=t3.getText().toString();
+                 d=t4.getText().toString();
                  e=t5.getText().toString();
-                f=t6.getText().toString();
-                g=t7.getText().toString();
+                 f=t6.getText().toString();
+                 g=t7.getText().toString();
+
+                 Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+
+
+
+
+
+                /*getMON();
+                getTUES();
+                getWED();
+                getTHURS();
+                getFRI();
+                getSAT();
+                getSUN();*/
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
 
                 Intent intent = new Intent(getApplicationContext(),playerViewSched.class);
                 intent.putExtra("s1", a);
@@ -268,13 +289,19 @@ public class player_sched extends AppCompatActivity {
                 intent.putExtra("s7", g);
                 startActivity(intent);
 
-                /*getMON();
-                getTUES();
-                getWED();
-                getTHURS();
-                getFRI();
-                getSAT();
-                getSUN();*/
+                Intent i = new Intent(getApplicationContext(), playerViewSched.class);
+                SharedPreferences sp1 = getSharedPreferences("playerSchedule", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor2 = sp1.edit();
+                editor2.putString("monday_session",a);
+                editor2.putString("tuesday_session",b);
+                editor2.putString("wednesday_session",c);
+                editor2.putString("thursday_session",d);
+                editor2.putString("friday_session",e);
+                editor2.putString("saturday_session",f);
+                editor2.putString("sunday_session",g);
+                editor2.commit();
+                startActivity(i);
+                finish();
             }
         });
     }
