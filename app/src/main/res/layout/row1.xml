@@ -39,7 +39,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Player name:     " />
 
             <TextView
                 android:id="@+id/playern"
@@ -57,7 +57,7 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Player ID:" />
 
             <TextView
                 android:id="@+id/playeri"
@@ -74,7 +74,7 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Age:" />
 
             <TextView
                 android:id="@+id/playera"
@@ -91,7 +91,7 @@
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Height:" />
 
             <TextView
                 android:id="@+id/playerh"
@@ -125,7 +125,7 @@
                 android:id="@+id/textView25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Type of workout:   " />
 
             <TextView
                 android:id="@+id/playert"
@@ -142,7 +142,7 @@
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Weight:" />
 
             <TextView
                 android:id="@+id/playerw"
