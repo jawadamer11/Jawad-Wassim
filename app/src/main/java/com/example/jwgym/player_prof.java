@@ -49,7 +49,7 @@ public class player_prof extends AppCompatActivity {
         typeofworkout = (TextView)findViewById(R.id.id_c);
         password =(TextView) findViewById(R.id.password_c);
         tvid = findViewById(R.id.id);
-        logout = findViewById(R.id.logout);
+
 
         rq = Volley.newRequestQueue(this);
         Test test = new Test();
@@ -58,18 +58,7 @@ public class player_prof extends AppCompatActivity {
         n = i1.getStringExtra("seat2");
         p = i1.getStringExtra("userpass");*/
 
-        logout.setOnClickListener(v -> {
-            SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
 
-            editor.putBoolean("hasLoggedIn",false);
-            editor.clear();
-            editor.commit();
-            Intent i = new Intent(getApplicationContext(),LogIn.class);
-            startActivity(i);
-            finish();
-
-        });
 
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
@@ -115,43 +104,6 @@ public class player_prof extends AppCompatActivity {
             }
         };
         requestQueue.add(stringRequest);
-
-
-
-        //  return ID;
-
-        //pname.setText(ID+"");
-       //
-
-
-
-
-
-        /*progressDialog.show();
-        client = new OkHttpClient();*/
-        //new GetUserDataRequest().execute();
-
-        //Intent j1 = getIntent();
-        //p_name = j1.getStringExtra("seat2");
-        //pname.setText("p_name");
-
-
-
-
-
-
-
-       /* buttonfetch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getData();
-
-            }
-        });*/
-
-
-
 
 
 

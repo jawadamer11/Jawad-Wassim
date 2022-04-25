@@ -2,7 +2,6 @@ package com.example.jwgym;
 
 import static com.example.jwgym.Test.URL;
 
-import android.annotation.SuppressLint;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +20,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+
 import java.util.Locale;
 
 public class player_sched extends AppCompatActivity {
@@ -28,17 +29,12 @@ public class player_sched extends AppCompatActivity {
     TextView t1, t2, t3, t4, t5, t6, t7;
     Button button5, button4;
     int hour, min;
-    String x;
-    String p, f, Day, a, b, c, d, e, g, q;
+    String smon, stues, swed, sthurs, sfri, ssat, ssun;
+    String p, f, Day, a, b, c, d, e, g, q, x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_sched);
-
-
-
-
-
 
         button4=findViewById(R.id.button4);
         button5=findViewById(R.id.button5);
@@ -66,28 +62,18 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); sat.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    t1.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t1.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
 
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     mon.setChecked(false);
-                }
-                Day="Monday";
-                q= p;
-
-
-
-            }
-
-        });
+                }}});
 
         tue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,23 +83,17 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); sat.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    Day="Tuesday";
-                                    t2.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t2.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     tue.setChecked(false);
-                    q=p;
-                }
-            }
-        });
+                }}});
 
 
 
@@ -125,23 +105,18 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); sat.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    Day="Wednesday";
-                                    t3.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t3.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     wed.setChecked(false);
                     p = hour+":"+min;
-                }
-            }
-        });
+                }}});
 
         thur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,23 +126,17 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); sat.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    q=p;
-                                    Day="Thursday";
-                                    t4.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t4.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     thur.setChecked(false);
-                }
-            }
-        });
+                }}});
 
         fri.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,24 +146,17 @@ public class player_sched extends AppCompatActivity {
                     tue.setChecked(false); sat.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    Day="Friday";
-                                    q=p;
-
-                                    t5.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t5.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     fri.setChecked(false);
-                }
-            }
-        });
+                }}});
 
         sun.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,23 +166,17 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); sat.setChecked(false); tue.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    q=p;
-                                    Day="Sunday";
-                                    t7.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t7.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     sun.setChecked(false);
-                }
-            }
-        });
+                }}});
         sat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -229,49 +185,47 @@ public class player_sched extends AppCompatActivity {
                     fri.setChecked(false); tue.setChecked(false); sun.setChecked(false);
                     TimePickerDialog timePickerDialog = new TimePickerDialog(player_sched.this,
                             new TimePickerDialog.OnTimeSetListener() {
-                                @SuppressLint("SetTextI18n")
                                 @Override
                                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                     hour= hourOfDay;
                                     min= minute;
-                                    p = hour+":"+min;
-                                    q=p;
-                                    Day="Saturday";
-                                    t6.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min)+" PM");
+                                    t6.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     sat.setChecked(false);
-                }
-            }
-        });
+                }}});
 
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String a=t1.getText().toString();
+                String b=t2.getText().toString();
+                String c=t3.getText().toString();
+                String d=t4.getText().toString();
+                String e=t5.getText().toString();
+                String f=t6.getText().toString();
+                String g=t7.getText().toString();
 
-                 a=t1.getText().toString();
-                 b=t2.getText().toString();
-                 c=t3.getText().toString();
-                 d=t4.getText().toString();
-                 e=t5.getText().toString();
-                 f=t6.getText().toString();
-                 g=t7.getText().toString();
+                SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
+                String x = sp.getString("username","");
 
-                 Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+                String url = URL+"/addtosched.php?pname=" + x + "&Monday=" + a + "&Tuesday=" + b +
+                        "&Wednesday=" + c + "&Thursday=" + d + "&Friday=" + e + "&Saturday=" + f + "&Sunday=" + g;
 
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                StringRequest request = new StringRequest(Request.Method.GET, url,
 
+                        response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
 
+                        error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
+                            //pb.setVisibility(View.INVISIBLE);
+                        }
+                );
+                queue.add(request);
+                // Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
 
-
-                /*getMON();
-                getTUES();
-                getWED();
-                getTHURS();
-                getFRI();
-                getSAT();
-                getSUN();*/
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
@@ -280,16 +234,17 @@ public class player_sched extends AppCompatActivity {
 
 
                 Intent intent = new Intent(getApplicationContext(),playerViewSched.class);
-                intent.putExtra("s1", a);
+               /* intent.putExtra("s1", a);
                 intent.putExtra("s2", b);
                 intent.putExtra("s3", c);
                 intent.putExtra("s4", d);
                 intent.putExtra("s5", e);
                 intent.putExtra("s6", f);
-                intent.putExtra("s7", g);
+                intent.putExtra("s7", g);*/
                 startActivity(intent);
+                finish();
 
-                Intent i = new Intent(getApplicationContext(), playerViewSched.class);
+               /* Intent i = new Intent(getApplicationContext(), playerViewSched.class);
                 SharedPreferences sp1 = getSharedPreferences("playerSchedule", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor2 = sp1.edit();
                 editor2.putString("monday_session",a);
@@ -301,121 +256,7 @@ public class player_sched extends AppCompatActivity {
                 editor2.putString("sunday_session",g);
                 editor2.commit();
                 startActivity(i);
-                finish();
-            }
-        });
+                finish();*/
+            }});
     }
-   /* public void getMON(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + a + "&Day=" + "Monday" ;
-
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request = new StringRequest(Request.Method.GET, url,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue.add(request);
-    }
-    public void getTUES(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + b + "&Day=" + "Tuesday" ;
-
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request = new StringRequest(Request.Method.GET, url,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue.add(request);
-    }
-    public void getWED(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url3 = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + c + "&Day=" + "Wednesday" ;
-
-        RequestQueue queue3 = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request3 = new StringRequest(Request.Method.GET, url3,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue3.add(request3);
-    }
-    public void  getTHURS(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url4 = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + d + "&Day=" + "Thursday" ;
-
-        RequestQueue queue4 = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request4 = new StringRequest(Request.Method.GET, url4,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue4.add(request4);
-    }
-    public void getFRI(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url5 = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + e + "&Day=" + "Friday" ;
-
-        RequestQueue queue5 = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request5 = new StringRequest(Request.Method.GET, url5,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue5.add(request5);
-    }
-    public void getSAT(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url6= URL+"/addtosched.php?pname=" + x + "&SessionHour=" + f + "&Day=" + "Saturday" ;
-
-        RequestQueue queue6 = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request6 = new StringRequest(Request.Method.GET, url6,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue6.add(request6);
-
-    }
-    public  void getSUN(){
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
-        x = sp.getString("username","");
-        String url7 = URL+"/addtosched.php?pname=" + x + "&SessionHour=" + g + "&Day=" + "Sunday" ;
-
-        RequestQueue queue7 = Volley.newRequestQueue(getApplicationContext());
-        StringRequest request7 = new StringRequest(Request.Method.GET, url7,
-
-                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
-
-                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
-                    //pb.setVisibility(View.INVISIBLE);
-                }
-        );
-        queue7.add(request7);
-    }*/
 }
