@@ -36,8 +36,8 @@ public class CustomAdapter1 extends BaseAdapter {
         inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     public class Holder {
-        TextView playern,playert,playeri,playera, playerw, playerh, playerg;
-        ImageView img;
+        TextView playern,playert,playeri,playera, playerw, playerh, playerg, playerp;
+        ImageView img, block;
     }
     @Override
     public int getCount() {
@@ -61,6 +61,7 @@ public class CustomAdapter1 extends BaseAdapter {
         rowView = inflater.inflate(R.layout.row1,null);
 
         holder.playeri = rowView.findViewById(R.id.playeri);
+        holder.playerp = rowView.findViewById(R.id.playerp);
         holder.playern = rowView.findViewById(R.id.playern);
         holder.playert = rowView.findViewById(R.id.playert);
         holder.playera = rowView.findViewById(R.id.playera);
@@ -69,23 +70,28 @@ public class CustomAdapter1 extends BaseAdapter {
         holder.playerg = rowView.findViewById(R.id.playerg);
 
         holder.img = rowView.findViewById(R.id.img);
+        holder.block= rowView.findViewById(R.id.block);
 
         JSONObject obj = data.optJSONObject(i);
         try {
             holder.playeri.setText(obj.getString("p_id"));
+            holder.playerp.setText(obj.getString("p_password"));
             holder.playern.setText(obj.getString("p_name"));
             holder.playert.setText(obj.getString("typeOfWorkout"));
             holder.playera.setText(obj.getString("age"));
             holder.playerh.setText(obj.getString("height"));
             holder.playerw.setText(obj.getString("weight"));
             holder.playerg.setText(obj.getString("gender"));
+
             holder.img.setTag(obj.getInt("p_id"));
+            holder.block.setTag(obj.getInt("p_id"));
             int pid = (int) holder.img.getTag();
+            String ID1 = pid+"";
             holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    String url = URL+"/deletePlayer.php?p_id="+pid;
+                    String url = URL+"/deletePlayer.php?p_id="+ID1;
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
@@ -108,7 +114,38 @@ public class CustomAdapter1 extends BaseAdapter {
                             Toast.makeText(con,"Error:"+error.toString(), Toast.LENGTH_SHORT).show(); }
                     });queue.add(request);
                 }
-            });}
+            });
+
+            holder.block.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    String url = URL+"/addToBlocked.php?p_id="+ID1+"&p_name="+holder.playern.getText()+
+                            "&p_password="+holder.playerp.getText()+"&reason= Payment Issues";
+                    RequestQueue queue = Volley.newRequestQueue(con);
+                    StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            if(response=="success"){
+                                Toast.makeText(con.getApplicationContext(),
+                                        "player with ID:"+pid+" is deleted from the list",Toast.LENGTH_LONG).show();
+
+                                ((managePlayer)con).onResume();
+                            }
+                            else {
+                                Toast.makeText(con, "Delete failed.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void
+                        onErrorResponse(VolleyError error) {
+                            Toast.makeText(con,"Error:"+error.toString(), Toast.LENGTH_SHORT).show(); }
+                    });queue.add(request);
+                }
+            });
+        }
         catch (JSONException e){
         }
         return rowView;

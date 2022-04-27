@@ -68,6 +68,7 @@ public class player_sched extends AppCompatActivity {
                                     min= minute;
                                     t1.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
 
+
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
@@ -200,13 +201,13 @@ public class player_sched extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String a=t1.getText().toString();
-                String b=t2.getText().toString();
-                String c=t3.getText().toString();
-                String d=t4.getText().toString();
-                String e=t5.getText().toString();
-                String f=t6.getText().toString();
-                String g=t7.getText().toString();
+                String a=t1.getText().toString()+" PM";
+                String b=t2.getText().toString()+" PM";
+                String c=t3.getText().toString()+" PM";
+                String d=t4.getText().toString()+" PM";
+                String e=t5.getText().toString()+" PM";
+                String f=t6.getText().toString()+" PM";
+                String g=t7.getText().toString()+" PM";
 
                 SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
                 String x = sp.getString("username","");

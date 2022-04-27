@@ -3,8 +3,13 @@ package com.example.jwgym;
 import android.content.Context;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateFormat;
 import android.widget.TextView;
 import android.widget.Toast;
 import static com.example.jwgym.Test.URL;
@@ -17,6 +22,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +33,7 @@ public class playerViewSched extends AppCompatActivity {
     String n;
     String ID;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +47,14 @@ public class playerViewSched extends AppCompatActivity {
         tx5 = findViewById(R.id.q5);
         tx6 = findViewById(R.id.q6);
         tx7 = findViewById(R.id.q7);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+        builder.setContentTitle("title");
+        builder.setContentText("this is notif");
+        builder.setSmallIcon(R.drawable.ic_launcher_background);
+        builder.setAutoCancel(true);
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+        managerCompat.notify(1, builder.build());
 
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
@@ -123,7 +140,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getpname() {
 
 
-        String url = URL + "/plscheddetail/p_name.php?id=" + ID;
+        String url = URL + "/plscheddetail/p_name.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -158,7 +175,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getMon() {
 
 
-        String url = URL+"/plscheddetail/Monday.php?id=" + ID;
+        String url = URL+"/plscheddetail/Monday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -193,7 +210,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getTues() {
 
 
-        String url = URL+"/plscheddetail/Tuesday.php?id=" + ID;
+        String url = URL+"/plscheddetail/Tuesday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -228,7 +245,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getWed() {
 
 
-        String url = URL+"/plscheddetail/Wednesday.php?id=" + ID;
+        String url = URL+"/plscheddetail/Wednesday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -263,7 +280,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getThursday() {
 
 
-        String url = URL + "/plscheddetail/Thursday.php?id=" + ID;
+        String url = URL + "/plscheddetail/Thursday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -298,7 +315,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getSat() {
 
 
-        String url = URL + "/plscheddetail/Saturday.php?id=" + ID;
+        String url = URL + "/plscheddetail/Saturday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -333,7 +350,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getSun() {
 
 
-        String url = URL + "/plscheddetail/Sunday.php?id=" + ID;
+        String url = URL + "/plscheddetail/Sunday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
@@ -368,7 +385,7 @@ public class playerViewSched extends AppCompatActivity {
     public void getFri() {
 
 
-        String url = URL + "/plscheddetail/Friday.php?id=" + ID;
+        String url = URL + "/plscheddetail/Friday.php?ID=" + ID;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
 
