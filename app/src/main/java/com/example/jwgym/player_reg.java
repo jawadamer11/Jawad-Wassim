@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_reg extends AppCompatActivity {
-    TextView username,status,payment;
+    TextView username,status,payment,privateSession;
     Button btnreg;
     String n,p, Url = Test.getURL();
     public String currentDate;
@@ -34,7 +34,7 @@ public class player_reg extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_reg);
-
+        privateSession = findViewById(R.id.PrivateSession);
         username = findViewById(R.id.username);
         status = findViewById(R.id.status);
         payment = findViewById(R.id.payment);
@@ -90,6 +90,10 @@ public class player_reg extends AppCompatActivity {
         });
 
 
+    privateSession.setOnClickListener(v -> {
+        Intent i = new Intent(getApplicationContext(),PrivateSession.class);
+        startActivity(i);
+    });
 
 
 

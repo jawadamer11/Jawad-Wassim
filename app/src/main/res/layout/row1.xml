@@ -6,213 +6,222 @@
     android:layout_height="match_parent">
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+
+            android:id="@+id/tableLayout"
+            android:layout_width="299dp"
+            android:layout_height="293dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Player name:     "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playern"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/player_name"
+                    android:textColor="@color/black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Player ID:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playeri"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="@string/player_id"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Age:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playera"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="@string/player_age"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Height:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playerh"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="@string/player_height"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Gender"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playerg"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="player age"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="Type of workout:   "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playert"
+                    android:layout_width="110dp"
+                    android:layout_height="37dp"
+                    android:gravity="center"
+                    android:text="@string/type_of_workout"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Weight:"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playerw"
+                    android:layout_width="169dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="@string/player_weight"
+                    android:textColor="@color/black" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Password"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/playerp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="player Password"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/imgt"
         android:layout_width="35dp"
         android:layout_height="38dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
 
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
         android:foreground="@android:drawable/ic_menu_delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:srcCompat="@android:drawable/screen_background_light_transparent" />
 
     <ImageView
         android:id="@+id/block"
         android:layout_width="35dp"
         android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toEndOf="@+id/tableLayout"
-        app:layout_constraintTop_toBottomOf="@+id/img"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/block" />
-
-    <TableLayout
-
-        android:id="@+id/tableLayout"
-        android:layout_width="299dp"
-        android:layout_height="293dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/img"
-        app:layout_constraintHorizontal_bias="0.19"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgt"
+        app:layout_constraintHorizontal_bias="0.278"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Player name:     "
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playern"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/player_name"
-                android:textColor="@color/black" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Player ID:"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playeri"
-                android:layout_width="72dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/player_id"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Age:"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playera"
-                android:layout_width="110dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/player_age"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Height:"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playerh"
-                android:layout_width="90dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/player_height"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Gender"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playerg"
-                android:layout_width="110dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="player age"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="37dp"
-                android:gravity="center"
-                android:text="Type of workout:   "
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playert"
-                android:layout_width="110dp"
-                android:layout_height="37dp"
-                android:gravity="center"
-                android:text="@string/type_of_workout"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Weight:"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playerw"
-                android:layout_width="169dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/player_weight"
-                android:textColor="@color/black" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Password"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/playerp"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:text="player Password"
-                android:textColor="@color/black" />
-        </TableRow>
-    </TableLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@mipmap/block" />
 
 </android.support.constraint.ConstraintLayout>

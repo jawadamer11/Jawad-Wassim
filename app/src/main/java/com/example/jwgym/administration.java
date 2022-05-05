@@ -25,7 +25,7 @@ public class administration extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), managePlayer.class);
                 startActivity(i);
-                finish();
+
             }
         });
 
@@ -34,7 +34,7 @@ public class administration extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), manageCoach.class);
                 startActivity(i);
-                finish();
+
             }
         });
     }

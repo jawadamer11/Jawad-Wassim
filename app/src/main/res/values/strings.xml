@@ -99,4 +99,11 @@
         <item>Coach</item>
 
     </string-array>
+    <string-array name="specilization">
+        <item>BodyBuilding</item>
+        <item>PowerLifting</item>
+        <item>CrossFit</item>
+        <item>rrrrr</item>
+
+    </string-array>
 </resources>

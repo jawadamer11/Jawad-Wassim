@@ -2,13 +2,11 @@ package com.example.jwgym;
 
 import static com.example.jwgym.Test.URL;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,7 +67,7 @@ public class CustomAdapter1 extends BaseAdapter {
         holder.playerw = rowView.findViewById(R.id.playerw);
         holder.playerg = rowView.findViewById(R.id.playerg);
 
-        holder.img = rowView.findViewById(R.id.img);
+        holder.img = rowView.findViewById(R.id.imgt);
         holder.block= rowView.findViewById(R.id.block);
 
         JSONObject obj = data.optJSONObject(i);

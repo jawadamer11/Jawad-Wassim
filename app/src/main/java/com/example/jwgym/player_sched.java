@@ -20,8 +20,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONException;
-
 import java.util.Locale;
 
 public class player_sched extends AppCompatActivity {
@@ -45,8 +43,8 @@ public class player_sched extends AppCompatActivity {
         fri = findViewById(R.id.fri);
         sat = findViewById(R.id.sat);
         sun = findViewById(R.id.sun);
-        t1 = findViewById(R.id.textView1);
-        t2 = findViewById(R.id.textView2);
+        t1 = findViewById(R.id.cname3);
+        t2 = findViewById(R.id.csalaryc);
         t3 = findViewById(R.id.textView3);
         t4 = findViewById(R.id.textView4);
         t5 = findViewById(R.id.textView5);

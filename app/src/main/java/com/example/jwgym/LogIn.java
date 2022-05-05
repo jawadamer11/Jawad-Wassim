@@ -93,6 +93,7 @@ public class LogIn extends AppCompatActivity {
                     editor1.putString("password",etpass);
                     editor1.commit();
                     startActivity(i);
+                    finish();
 
 
 
@@ -123,6 +124,7 @@ public class LogIn extends AppCompatActivity {
                     i.putExtra("seat1", etname+"");
                     i.putExtra("userpass",etpass);
                     startActivity(i);
+                    finish();
 
 
                 }

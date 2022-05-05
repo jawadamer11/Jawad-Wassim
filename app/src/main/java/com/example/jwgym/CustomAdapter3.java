@@ -23,20 +23,20 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CustomAdapter2 extends BaseAdapter {
+public class CustomAdapter3 extends BaseAdapter {
 
     Context con;
     JSONArray data;
     LayoutInflater inflater;
     // constructor
-    public CustomAdapter2(Context c, JSONArray data){
+    public CustomAdapter3(Context c, JSONArray data){
         this.con = c;
         this.data = data;
         inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
     public static class Holder {
-        TextView coachn,coachsp,coachi,coachsa;
-        ImageView img;
+        TextView coachn,coachsa;
+
     }
     @Override
     public int getCount() {
@@ -55,25 +55,25 @@ public class CustomAdapter2 extends BaseAdapter {
     @SuppressLint({"ViewHolder", "InflateParams"})
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        final Holder holder = new Holder();
+        final CustomAdapter2.Holder holder = new CustomAdapter2.Holder();
         final View rowView;
-        rowView = inflater.inflate(R.layout.row2,null);
-        holder.coachn = rowView.findViewById(R.id.tn);
-        holder.coachi = rowView.findViewById(R.id.coachi);
-        holder.coachsp = rowView.findViewById(R.id.cspecial3);
-        holder.coachsa = rowView.findViewById(R.id.ts);
-        holder.img = rowView.findViewById(R.id.imgt);
+        rowView = inflater.inflate(R.layout.rowww,null);
+        //holder.coachn = rowView.findViewById(R.id.coachname);
+       // holder.coachi = rowView.findViewById(R.id.coachi);
+       // holder.coachsp = rowView.findViewById(R.id.cspecial3);
+        holder.coachsa = rowView.findViewById(R.id.coachsalary);
+        //holder.img = rowView.findViewById(R.id.imgt);
 
         JSONObject obj = data.optJSONObject(i);
         try {
             holder.coachn.setText(obj.getString("c_name"));
-            holder.coachi.setText(obj.getString("c_id"));
+           // holder.coachi.setText(obj.getString("c_id"));
             holder.coachsa.setText(obj.getString("salary"));
-            holder.coachsp.setText(obj.getString("specilization"));
+            //holder.coachsp.setText(obj.getString("specilization"));
 
-            holder.img.setTag(obj.getInt("c_id"));
+           // holder.img.setTag(obj.getInt("c_id"));
 
-            holder.img.setOnClickListener(new View.OnClickListener() {
+           /* holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String url = URL+"/deleteCoach.php?c_id="+holder.img.getTag();
@@ -99,7 +99,7 @@ public class CustomAdapter2 extends BaseAdapter {
                     }
                     );queue.add(request);
                 }
-            });}
+            })*/;}
         catch (JSONException e){
         }
         return rowView;
