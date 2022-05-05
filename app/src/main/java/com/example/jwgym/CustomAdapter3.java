@@ -65,9 +65,6 @@ public class CustomAdapter3 extends BaseAdapter {
         holder.sesstime = rowView.findViewById(R.id.sesstime);
 
 
-        holder.img = rowView.findViewById(R.id.imgt);
-        holder.block= rowView.findViewById(R.id.block);
-
         JSONObject obj = data.optJSONObject(i);
         try {
             holder.sessPID.setText(obj.getString("p_id"));
