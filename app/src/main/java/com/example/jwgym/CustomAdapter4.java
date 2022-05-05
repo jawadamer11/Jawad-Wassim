@@ -23,13 +23,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CustomAdapter3 extends BaseAdapter {
+public class CustomAdapter4 extends BaseAdapter {
 
     Context con;
     JSONArray data;
     LayoutInflater inflater;
     // constructor
-    public CustomAdapter3(Context c, JSONArray data){
+    public CustomAdapter4(Context c, JSONArray data){
         this.con = c;
         this.data = data;
         inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
