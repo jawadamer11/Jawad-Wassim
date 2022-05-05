@@ -5,13 +5,28 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
+//ImageView im2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       // im2= findViewById(R.id.im2);
+
+       /* im2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
+                im2.startAnimation(animation);
+            }
+        });*/
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
 

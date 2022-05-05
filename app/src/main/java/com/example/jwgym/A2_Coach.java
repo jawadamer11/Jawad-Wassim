@@ -32,9 +32,14 @@ FloatingActionButton floatingActionButton, floatingActionButton2;
         floatingActionButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(getApplicationContext(), coach_sched.class);
+                Intent j = getIntent();
+                n = j.getStringExtra("seat1");
+                p = j.getStringExtra("userpass");
+
+                Intent i1 = new Intent(getApplicationContext(),coach_sched.class);
+                i1.putExtra("seat2",n+"");
+                i1.putExtra("userpass",p);
                 startActivity(i1);
-                finish();
             }
         });
     }

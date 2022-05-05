@@ -31,7 +31,6 @@ public class managePlayer extends AppCompatActivity {
         setContentView(R.layout.activity_manage_player);
 
 
-        getdatafromdb();
 
         list = findViewById(R.id.list);
         addpl = findViewById(R.id.addpl);

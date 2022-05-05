@@ -57,6 +57,7 @@ TextView username, password, id_c, salary, spec;
                 id_c.setText(Test.getId());
                 ID=value;
 
+
                 getCname();
                 getcpassword();
                 getSalary();
