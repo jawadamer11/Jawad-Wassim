@@ -47,8 +47,13 @@ public class PrivateSession extends AppCompatActivity {
 
 
     }
+    protected void onResume() {
+        getdatafromdb();
+        super.onResume();
+    }
+
     public void getdatafromdb(){
-        String url = Test.getURL()+"/privateSession/spinnerCoach.php?specilization="+"PowerLifting";
+        String url = Test.getURL()+"/privateSession/spinnerCoach.php?specilization="+spinnerSpec.getSelectedItem().toString();
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url, null, response -> {
@@ -61,8 +66,5 @@ public class PrivateSession extends AppCompatActivity {
                 });
         queue.add(jsonArrayRequest);
     }
-    protected void onResume() {
-        getdatafromdb();
-        super.onResume();
-    }
+
 }

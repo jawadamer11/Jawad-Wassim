@@ -36,7 +36,7 @@ public class CustomAdapter3 extends BaseAdapter {
     }
     public class Holder {
         TextView sessPID,sesstime,sessdate;
-        ImageView img, block;
+
     }
     @Override
     public int getCount() {
