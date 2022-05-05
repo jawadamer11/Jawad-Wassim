@@ -34,7 +34,7 @@ public class PrivateSession extends AppCompatActivity {
 
     ListView list1;
     JSONArray data;
-    CustomAdapter3 cust_adapater3;
+    CustomAdapter4 cust_adapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +58,8 @@ public class PrivateSession extends AppCompatActivity {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url, null, response -> {
                     data = response;
-                    cust_adapater3 = new CustomAdapter3(getApplicationContext(),data);
-                    list.setAdapter(cust_adapater3);
+                    cust_adapater = new CustomAdapter4(getApplicationContext(),data);
+                    list.setAdapter(cust_adapater);
                 }, error -> {
                     // TODO: Handle error
                     Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
