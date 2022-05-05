@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class AfterHandler extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class AfterHandler extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                btnLogin.startAnimation(animation);
                 Intent i = new Intent(AfterHandler.this,LogIn.class);
                 startActivity(i);
             }
