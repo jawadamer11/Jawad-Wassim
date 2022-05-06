@@ -9,7 +9,6 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.format.DateFormat;
 import android.widget.TextView;
 import android.widget.Toast;
 import static com.example.jwgym.Test.URL;
@@ -22,8 +21,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +33,7 @@ public class playerViewSched extends AppCompatActivity {
     TextView tx1, tx2, tx3, tx4, tx5, tx6, tx7;
     String n;
     String ID;
-
+    public String currentDate;
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +49,82 @@ public class playerViewSched extends AppCompatActivity {
         tx6 = findViewById(R.id.q6);
         tx7 = findViewById(R.id.q7);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
-        builder.setContentTitle("title");
-        builder.setContentText("this is notif");
-        builder.setSmallIcon(R.drawable.ic_launcher_background);
-        builder.setAutoCancel(true);
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
-        managerCompat.notify(1, builder.build());
+
+        Calendar calendar = Calendar.getInstance();
+        currentDate = java.text.DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+       // String Day = currentDate.substring(3);
+
+            if(currentDate.startsWith("Mon") && tx1.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Monday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Tue") && tx2.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Tuesday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Wed") && tx3.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Wednesday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Thur") && tx4.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Thursday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Fri") && tx5.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Friday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Sat") && tx6.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Saturday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+            else
+            if(currentDate.startsWith("Sun") && tx7.getText().toString() != "No Session"){
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
+                builder.setContentTitle("Sunday Workout!!!");
+                builder.setContentText("Are you ready for today's workout?");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
+                managerCompat.notify(1, builder.build());
+            }
+
+
 
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
