@@ -42,7 +42,7 @@ public class adminAddCoach extends AppCompatActivity {
                 String salary = chsalary.getText().toString();;
                 String pw = chpass.getText().toString();
                 String specialization = spinner.getSelectedItem().toString();
-
+//s
 
                 if (name.equals("") || pw.equals("") || salary.equals("")) {
 

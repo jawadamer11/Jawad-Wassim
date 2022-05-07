@@ -13,12 +13,13 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:background="#E65757"
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/imgt"
-        app:layout_constraintVertical_bias="0.204"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/block" />
 
     <ImageView
@@ -29,6 +30,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:background="#47D6E8"
         android:foreground="@android:drawable/ic_menu_delete"
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Player name:     "
+                android:text="Player name:"
                 android:textColor="@color/black" />
 
             <TextView

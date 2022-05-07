@@ -41,7 +41,7 @@ public class managePlayer extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),adminAddPlayer.class);
                 startActivity(i);
                 finish();
-            }
+            }//s
         });
     }
 

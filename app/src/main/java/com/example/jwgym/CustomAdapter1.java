@@ -46,7 +46,7 @@ public class CustomAdapter1 extends BaseAdapter {
     public Object getItem(int i) {
         // i is the clicked position and is filled by Android
         return null;
-
+    //ss
     }
     @Override
     public long getItemId(int i) {
