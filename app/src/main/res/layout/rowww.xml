@@ -11,25 +11,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
             android:id="@+id/coachname"
-            android:textSize="20sp"/>
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FFE72929"
             android:layout_margin="5dp"
-            android:id="@+id/coachsalary"
-            android:textStyle="bold"
-            android:textSize="15sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/coachsalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#FFE72929"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

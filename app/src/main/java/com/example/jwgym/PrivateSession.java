@@ -5,6 +5,9 @@ import static com.example.jwgym.Test.URL;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -24,7 +27,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class PrivateSession extends AppCompatActivity {
+public class PrivateSession extends AppCompatActivity  {
     ListView list;
     Spinner spinnerSpec,spinnercoach;
     ArrayList<String> specList = new ArrayList<>();
@@ -44,27 +47,47 @@ public class PrivateSession extends AppCompatActivity {
         spinnerSpec = findViewById(R.id.spinnerSpec);
         getdatafromdb();
 
+       spinnerSpec.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+           @Override
+           public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+               getdatafromdb();
+           }
 
+           @Override
+           public void onNothingSelected(AdapterView<?> parent) {
 
+           }
+       });
     }
+
+    @Override
     protected void onResume() {
         getdatafromdb();
         super.onResume();
     }
 
     public void getdatafromdb(){
-        String url = Test.getURL()+"/privateSession/spinnerCoach.php?specilization="+spinnerSpec.getSelectedItem().toString();
+        String url =Test.getURL()+ "/privateSession/spinnerCoach.php?specilization="+spinnerSpec.getSelectedItem().toString();
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
-                (Request.Method.GET, url, null, response -> {
-                    data = response;
-                    cust_adapater = new CustomAdapter4(getApplicationContext(),data);
-                    list.setAdapter(cust_adapater);
-                }, error -> {
-                    // TODO: Handle error
-                    Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+                (Request.Method.GET, url, null, new
+                        Response.Listener<JSONArray>() {
+                            @Override
+                            public void onResponse(JSONArray response) {
+                                data = response;
+                                cust_adapater = new
+                                        CustomAdapter4(PrivateSession.this,data);
+                                list.setAdapter(cust_adapater);
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+// TODO: Handle error
+                        Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+                    }
                 });
         queue.add(jsonArrayRequest);
     }
+
 
 }

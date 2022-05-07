@@ -206,8 +206,8 @@
         android:layout_height="38dp"
 
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
         android:foreground="@android:drawable/ic_menu_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -218,8 +218,9 @@
         android:layout_width="35dp"
         android:layout_height="38dp"
         android:layout_marginTop="28dp"
+        android:background="@color/purple_200"
         app:layout_constraintEnd_toStartOf="@+id/imgt"
-        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@mipmap/block" />

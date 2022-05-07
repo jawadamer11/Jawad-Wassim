@@ -58,7 +58,7 @@ public class CustomAdapter4 extends BaseAdapter {
         final CustomAdapter2.Holder holder = new CustomAdapter2.Holder();
         final View rowView;
         rowView = inflater.inflate(R.layout.rowww,null);
-        //holder.coachn = rowView.findViewById(R.id.coachname);
+        holder.coachn = rowView.findViewById(R.id.coachname);
        // holder.coachi = rowView.findViewById(R.id.coachi);
        // holder.coachsp = rowView.findViewById(R.id.cspecial3);
         holder.coachsa = rowView.findViewById(R.id.coachsalary);
