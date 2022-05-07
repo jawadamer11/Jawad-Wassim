@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
     <ImageView
@@ -20,17 +21,18 @@
         tools:srcCompat="@android:drawable/screen_background_light_transparent" />
 
     <TableLayout
-        android:layout_width="184dp"
-        app:layout_goneMarginStart="20dp"
-        android:layout_height="118dp"
+        android:id="@+id/tableLayout3"
+        android:layout_width="161dp"
+        android:layout_height="119dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgt"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073">
+        app:layout_constraintVertical_bias="0.026"
+        app:layout_goneMarginStart="20dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -39,10 +41,11 @@
             <TextView
                 android:id="@+id/tn"
                 android:layout_width="107dp"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:layout_height="28dp"
-                android:text="@string/coach_name" />
+                android:gravity="center"
+                android:text="@string/coach_name"
+                android:textColor="#0BE84A"
+                android:textSize="20dp" />
         </TableRow>
 
         <TableRow
@@ -51,11 +54,11 @@
 
             <TextView
                 android:id="@+id/coachi"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:layout_width="135dp"
                 android:layout_height="30dp"
-                android:text="@string/coach_id" />
+                android:gravity="center"
+                android:text="@string/coach_id"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -65,10 +68,10 @@
             <TextView
                 android:id="@+id/cspecial3"
                 android:layout_width="90dp"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:layout_height="30dp"
-                android:text="@string/specialization" />
+                android:gravity="center"
+                android:text="@string/specialization"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -77,13 +80,26 @@
 
             <TextView
                 android:id="@+id/ts"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:text="@string/salary" />
+                android:gravity="center"
+                android:text="@string/salary"
+                android:textColor="@color/white" />
         </TableRow>
 
     </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/imagedesign"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout3"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
 
 </android.support.constraint.ConstraintLayout>

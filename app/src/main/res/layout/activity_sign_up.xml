@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/k"
+    android:background="@drawable/sig"
     tools:context=".SignUp">
 
     <EditText
@@ -90,11 +90,12 @@
 
     <Spinner
         android:id="@+id/genderspinner"
-        android:layout_width="117dp"
+        android:layout_width="84dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
+        android:pointerIcon="arrow"
         android:background="@drawable/spinnerdesign"
         android:entries="@array/gender"
         android:fontFamily="casual"
@@ -132,10 +133,11 @@
 
     <Spinner
         android:id="@+id/typespinner"
-        android:layout_width="183dp"
+        android:layout_width="143dp"
         android:layout_height="48dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
+        android:pointerIcon="arrow"
         android:layout_marginTop="20dp"
         android:background="@drawable/spinnerdesign"
         android:entries="@array/typeofworkout"
