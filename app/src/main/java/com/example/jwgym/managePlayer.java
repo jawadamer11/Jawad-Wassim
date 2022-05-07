@@ -56,20 +56,20 @@ public class managePlayer extends AppCompatActivity {
         String url = URL+"/getallplayers.php";
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
-                            @Override
-                            public void onResponse(JSONArray response) {
-                              //  data = response;
-                                cust_adapater = new CustomAdapter1(getApplicationContext(),response);
-                                list.setAdapter(cust_adapater);
-
-                            }
-                        }, new Response.ErrorListener() {
                     @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
-                        Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
-                    }
-                });
+            public void onResponse(JSONArray response) {
+              //  data = response;
+                cust_adapater = new CustomAdapter1(getApplicationContext(),response);
+                list.setAdapter(cust_adapater);
+
+            }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // TODO: Handle error
+                Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+            }
+        });
         queue.add(jsonArrayRequest);
     }
 }
