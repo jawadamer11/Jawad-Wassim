@@ -49,6 +49,14 @@ public class playerViewSched extends AppCompatActivity {
         tx6 = findViewById(R.id.q6);
         tx7 = findViewById(R.id.q7);
 
+        getpname();
+        getMon();
+        getThursday();
+        getWed();
+        getFri();
+        getSat();
+        getSun();
+        getTues();
 
         Calendar calendar = Calendar.getInstance();
         currentDate = java.text.DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());

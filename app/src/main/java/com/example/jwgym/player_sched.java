@@ -27,8 +27,7 @@ public class player_sched extends AppCompatActivity {
     TextView t1, t2, t3, t4, t5, t6, t7;
     Button button5, button4;
     int hour, min;
-    String smon, stues, swed, sthurs, sfri, ssat, ssun;
-    String p, f, Day, a, b, c, d, e, g, q, x;
+    String p;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +64,6 @@ public class player_sched extends AppCompatActivity {
                                     hour= hourOfDay;
                                     min= minute;
                                     t1.setText(String.format(Locale.getDefault(), "%02d:%02d",hour, min));
-
-
                                 }
                             }, hour, min, false);
                     timePickerDialog.setTitle("Select Time");
@@ -114,7 +111,7 @@ public class player_sched extends AppCompatActivity {
                     timePickerDialog.setTitle("Select Time");
                     timePickerDialog.show();
                     wed.setChecked(false);
-                    p = hour+":"+min;
+                    //p = hour+":"+min;
                 }}});
 
         thur.setOnClickListener(new View.OnClickListener() {
@@ -199,13 +196,21 @@ public class player_sched extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String a=t1.getText().toString()+" PM";
+                String a=t1.getText().toString();
+                String b=t2.getText().toString();
+                String c=t3.getText().toString();//+" PM";
+                String d=t4.getText().toString();//+" PM";
+                String e=t5.getText().toString();//+" PM";
+                String f=t6.getText().toString();//+" PM";
+                String g=t7.getText().toString();//+" PM";
+
+              /*  String a=t1.getText().toString()+" PM";
                 String b=t2.getText().toString()+" PM";
                 String c=t3.getText().toString()+" PM";
                 String d=t4.getText().toString()+" PM";
                 String e=t5.getText().toString()+" PM";
                 String f=t6.getText().toString()+" PM";
-                String g=t7.getText().toString()+" PM";
+                String g=t7.getText().toString()+" PM";*/
 
                 SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
                 String x = sp.getString("username","");
@@ -233,29 +238,9 @@ public class player_sched extends AppCompatActivity {
 
 
                 Intent intent = new Intent(getApplicationContext(),playerViewSched.class);
-               /* intent.putExtra("s1", a);
-                intent.putExtra("s2", b);
-                intent.putExtra("s3", c);
-                intent.putExtra("s4", d);
-                intent.putExtra("s5", e);
-                intent.putExtra("s6", f);
-                intent.putExtra("s7", g);*/
                 startActivity(intent);
                 finish();
 
-               /* Intent i = new Intent(getApplicationContext(), playerViewSched.class);
-                SharedPreferences sp1 = getSharedPreferences("playerSchedule", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor2 = sp1.edit();
-                editor2.putString("monday_session",a);
-                editor2.putString("tuesday_session",b);
-                editor2.putString("wednesday_session",c);
-                editor2.putString("thursday_session",d);
-                editor2.putString("friday_session",e);
-                editor2.putString("saturday_session",f);
-                editor2.putString("sunday_session",g);
-                editor2.commit();
-                startActivity(i);
-                finish();*/
             }});
     }
 }
