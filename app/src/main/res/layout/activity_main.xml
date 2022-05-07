@@ -8,4 +8,15 @@
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="150dp"
+        app:srcCompat="@drawable/ic_baseline_fitness_center_24" />
 </RelativeLayout>
