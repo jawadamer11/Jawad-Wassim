@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_reg extends AppCompatActivity {
-    TextView username,status,payment,privateSession;
+    TextView username,status,payment,privateSession,cooosh;
     Button btnreg;
     String n,p, Url = Test.getURL();
     public String currentDate;
@@ -39,6 +39,9 @@ public class player_reg extends AppCompatActivity {
         status = findViewById(R.id.status);
         payment = findViewById(R.id.payment);
         btnreg = findViewById(R.id.button);
+        cooosh = findViewById(R.id.coachhh);
+
+
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
         username.setText(sp.getString("username", ""));
@@ -48,6 +51,12 @@ public class player_reg extends AppCompatActivity {
 
         TextView date = findViewById(R.id.Textview);
         date.setText(currentDate);
+
+        Intent j = getIntent();
+        cooosh.setText(j.getStringExtra("cname"));
+
+        payment.setText(cost+j.getStringExtra("salary"));
+
 
 
         SharedPreferences sp1 = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);

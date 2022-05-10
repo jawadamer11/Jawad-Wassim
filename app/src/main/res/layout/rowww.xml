@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:paddingLeft="10dp">
 
@@ -34,8 +35,14 @@
 
     </LinearLayout>
 
-
-
+    <ImageView
+        android:id="@+id/btnchoose"
+        android:layout_width="130dp"
+        android:layout_height="72dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_red_light"
+        app:srcCompat="@drawable/background_btn"
+        tools:srcCompat="@drawable/dumbell" />
 
 
 </LinearLayout>

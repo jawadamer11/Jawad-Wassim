@@ -85,7 +85,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:text="200000"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -97,6 +96,13 @@
                     android:text="L.L."
                     android:textColor="@color/black"
                     android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/coachhh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
