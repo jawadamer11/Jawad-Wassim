@@ -3,9 +3,11 @@ package com.example.jwgym;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -25,7 +27,7 @@ import java.util.Map;
 
 public class LogIn extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
-    Button logbtn;
+    Button logbtn,fb, insta, loc, call;
     EditText logname, logpass;
     JSONArray data;
     TextView logsignup, admin;
@@ -38,14 +40,50 @@ public class LogIn extends AppCompatActivity {
 
 
 
-
+        call = findViewById(R.id.call);
         logbtn= findViewById(R.id.logbtn);
+        fb= findViewById(R.id.fb);
+        insta= findViewById(R.id.insta);
+        loc= findViewById(R.id.loc);
         logname= (EditText) findViewById(R.id.etname);
         logpass=(EditText) findViewById(R.id.etpass);
         logsignup= findViewById(R.id.logsignup);
         admin= findViewById(R.id.admin);
         spinner2 = findViewById(R.id.spinner2);
 
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri fbpage = Uri.parse("http://www.facebook.com");
+                Intent i = new Intent(Intent.ACTION_VIEW, fbpage);
+                startActivity(i);
+            }
+        });
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri instapage = Uri.parse("http://www.instagram.com");
+                Intent i = new Intent(Intent.ACTION_VIEW, instapage);
+                startActivity(i);
+            }
+        });
+        loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:0,0?q=zahle,+Lebanon");
+                Intent i = new Intent(Intent.ACTION_VIEW, location);
+                startActivity(i);
+            }
+        });
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("tel:03072543");
+                Intent i = new Intent(Intent.ACTION_DIAL, location);
+                startActivity(i);
+            }
+        });
 
 
 

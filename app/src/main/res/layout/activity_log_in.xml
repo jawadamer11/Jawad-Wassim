@@ -7,6 +7,24 @@
     android:background="@drawable/img12"
     tools:context=".LogIn">
 
+    <Button
+        android:id="@+id/fb"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circlebtn"
+        android:contentDescription="@string/fff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Facebook"
+        android:textColor="@color/white"
+        android:textSize="5dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <TextView
         android:id="@+id/logsignup"
         android:layout_width="wrap_content"
@@ -114,5 +132,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
          />
+
+    <Button
+        android:id="@+id/insta"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circlebtn1"
+        android:contentDescription="@string/fff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Instagram"
+        android:textColor="@color/black"
+        android:textSize="5dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/loc"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/imagedesign"
+        android:contentDescription="@string/fff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Location"
+        android:textColor="@color/teal_200"
+        android:textSize="5dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insta"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="480dp"
+        android:background="@drawable/circlebtn3"
+        android:contentDescription="@string/fff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="call us"
+        android:textColor="@color/white"
+        android:textSize="5dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loc"
+        app:layout_constraintVertical_bias="0.128"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </android.support.constraint.ConstraintLayout>
