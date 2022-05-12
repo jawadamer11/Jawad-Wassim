@@ -5,6 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class A2_Coach extends AppCompatActivity {
 FloatingActionButton floatingActionButton, floatingActionButton2;
@@ -19,6 +21,8 @@ FloatingActionButton floatingActionButton, floatingActionButton2;
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                floatingActionButton.startAnimation(animation);
                 Intent j = getIntent();
                 n = j.getStringExtra("seat1");
                 p = j.getStringExtra("userpass");
@@ -32,6 +36,8 @@ FloatingActionButton floatingActionButton, floatingActionButton2;
         floatingActionButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                floatingActionButton2.startAnimation(animation);
                 Intent j = getIntent();
                 n = j.getStringExtra("seat1");
                 p = j.getStringExtra("userpass");

@@ -4,6 +4,8 @@ import static com.example.jwgym.Test.URL;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -40,6 +42,8 @@ public class adminAddPlayer extends AppCompatActivity {
         signregister= findViewById(R.id.signad);
 
         signregister.setOnClickListener(v -> {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+            signregister.startAnimation(animation);
             String name = signname.getText().toString();
             String height = signheight.getText().toString();
             String weight = signweight.getText().toString();

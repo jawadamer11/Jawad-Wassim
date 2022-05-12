@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -196,6 +198,8 @@ public class player_sched extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                button5.startAnimation(animation);
                 String a=t1.getText().toString();
                 String b=t2.getText().toString();
                 String c=t3.getText().toString();//+" PM";
@@ -235,7 +239,8 @@ public class player_sched extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                button4.startAnimation(animation);
 
                 Intent intent = new Intent(getApplicationContext(),playerViewSched.class);
                 startActivity(intent);

@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class A2_Player extends AppCompatActivity {
@@ -25,6 +27,8 @@ public class A2_Player extends AppCompatActivity {
         logoutIMG = findViewById(R.id.logoutIMG);
 
         logoutIMG.setOnClickListener(v -> {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+            logoutIMG.startAnimation(animation);
             SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 

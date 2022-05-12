@@ -10,12 +10,13 @@
 
     <EditText
         android:id="@+id/signp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:autofillHints=""
         android:background="@drawable/edittextdesgn"
         android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:drawableTint="@color/black"
         android:ems="10"
         android:fontFamily="casual"
         android:gravity="center"
@@ -26,16 +27,17 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signa"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/signn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:background="@drawable/edittextdesgn"
         android:drawableRight="@drawable/ic_baseline_person_24"
+        android:drawableTint="@color/black"
         android:ems="10"
         android:fontFamily="casual"
         android:gravity="center"
@@ -45,12 +47,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/signa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:autofillHints=""
         android:background="@drawable/edittextdesgn"
@@ -69,8 +72,8 @@
 
     <EditText
         android:id="@+id/signh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:autofillHints=""
         android:background="@drawable/edittextdesgn"
@@ -84,12 +87,12 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/typespinner"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/signw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:autofillHints=""
         android:background="@drawable/edittextdesgn"
@@ -102,12 +105,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signh" />
+        app:layout_constraintTop_toBottomOf="@+id/signh"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Spinner
         android:id="@+id/genderspinner"
-        android:layout_width="117dp"
-        android:layout_height="48dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:background="@drawable/spinnerdesign"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="44dp"
@@ -126,6 +130,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/buttondesign1"
+        android:drawableRight="@drawable/ic_baseline_fitness_center_24"
+        android:drawableTint="@color/black"
         android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.786"
@@ -134,8 +140,8 @@
 
     <Spinner
         android:id="@+id/typespinner"
-        android:layout_width="183dp"
-        android:layout_height="48dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginStart="36dp"
         android:background="@drawable/spinnerdesign"
         android:layout_marginLeft="36dp"

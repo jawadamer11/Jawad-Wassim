@@ -33,6 +33,8 @@ public class AfterHandler extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                btnSignup.startAnimation(animation);
                 Intent i = new Intent(AfterHandler.this,SignUp.class);
                 startActivity(i);
             }

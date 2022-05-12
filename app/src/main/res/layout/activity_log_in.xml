@@ -4,26 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img12"
+    android:background="@drawable/k"
     tools:context=".LogIn">
-
-    <Button
-        android:id="@+id/fb"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/circlebtn"
-        android:contentDescription="@string/fff"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Facebook"
-        android:textColor="@color/white"
-        android:textSize="5dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/logsignup"
@@ -43,8 +25,8 @@
     <android.support.v7.widget.AppCompatEditText
 
         android:id="@+id/etname"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittextdesgn"
         android:drawableRight="@drawable/ic_baseline_person_24"
@@ -59,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/admin"
@@ -79,24 +61,25 @@
 
     <Button
         android:id="@+id/logbtn"
-        android:layout_width="228dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/buttondesign1"
         android:drawableRight="@drawable/ic_baseline_fitness_center_24"
         android:drawableTint="@color/black"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpass" />
+        app:layout_constraintTop_toBottomOf="@+id/etpass"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/etpass"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edittextdesgn"
         android:drawableRight="@drawable/ic_baseline_lock_24"
         android:drawableTint="@color/black"
@@ -104,20 +87,21 @@
         android:hint="@string/password"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etname"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="170dp"
-        android:layout_height="59dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/spinnerdesign"
         android:entries="@array/login"
         android:pointerIcon="hand"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/csalaryc" />
 
@@ -133,61 +117,93 @@
         app:layout_constraintTop_toTopOf="parent"
          />
 
-    <Button
-        android:id="@+id/insta"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/circlebtn1"
-        android:contentDescription="@string/fff"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Instagram"
-        android:textColor="@color/black"
-        android:textSize="5dp"
-        android:textStyle="italic"
+    <TableLayout
+        android:layout_width="37dp"
+        android:layout_height="124dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/csalaryc"
         app:layout_constraintEnd_toStartOf="@+id/csalaryc"
-        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fb"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.694">
 
-    <Button
-        android:id="@+id/loc"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/imagedesign"
-        android:contentDescription="@string/fff"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Location"
-        android:textColor="@color/teal_200"
-        android:textSize="5dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insta"
-        tools:ignore="TouchTargetSizeCheck" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/call"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="480dp"
-        android:background="@drawable/circlebtn3"
-        android:contentDescription="@string/fff"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="call us"
-        android:textColor="@color/white"
-        android:textSize="5dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/csalaryc"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loc"
-        app:layout_constraintVertical_bias="0.128"
-        tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/fb"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circlebtn"
+                android:contentDescription="@string/fff"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Facebook"
+                android:textColor="@color/white"
+                android:textSize="5dp"
+                android:textStyle="italic"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/insta"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circlebtn1"
+                android:contentDescription="@string/fff"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Instagram"
+                android:textColor="@color/black"
+                android:textSize="5dp"
+                android:textStyle="italic"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/loc"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/imagedesign"
+                android:contentDescription="@string/fff"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Location"
+                android:textColor="@color/purple_500"
+                android:textSize="5dp"
+                android:textStyle="italic"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/call"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/circlebtn3"
+                android:contentDescription="@string/fff"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="call us"
+                android:textColor="@color/white"
+                android:textSize="5dp"
+                android:textStyle="italic"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+    </TableLayout>
 
 
 </android.support.constraint.ConstraintLayout>

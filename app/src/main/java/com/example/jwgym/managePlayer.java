@@ -7,6 +7,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -38,6 +40,8 @@ public class managePlayer extends AppCompatActivity {
         addpl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                addpl.startAnimation(animation);
                 Intent i = new Intent(getApplicationContext(),adminAddPlayer.class);
                 startActivity(i);
                 finish();

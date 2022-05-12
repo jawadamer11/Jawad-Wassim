@@ -8,6 +8,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -55,6 +57,8 @@ public class LogIn extends AppCompatActivity {
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                fb.startAnimation(animation);
                 Uri fbpage = Uri.parse("http://www.facebook.com");
                 Intent i = new Intent(Intent.ACTION_VIEW, fbpage);
                 startActivity(i);
@@ -63,6 +67,8 @@ public class LogIn extends AppCompatActivity {
         insta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                insta.startAnimation(animation);
                 Uri instapage = Uri.parse("http://www.instagram.com");
                 Intent i = new Intent(Intent.ACTION_VIEW, instapage);
                 startActivity(i);
@@ -71,6 +77,8 @@ public class LogIn extends AppCompatActivity {
         loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                loc.startAnimation(animation);
                 Uri location = Uri.parse("geo:0,0?q=zahle,+Lebanon");
                 Intent i = new Intent(Intent.ACTION_VIEW, location);
                 startActivity(i);
@@ -79,6 +87,8 @@ public class LogIn extends AppCompatActivity {
         call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                call.startAnimation(animation);
                 Uri location = Uri.parse("tel:03072543");
                 Intent i = new Intent(Intent.ACTION_DIAL, location);
                 startActivity(i);
@@ -88,11 +98,15 @@ public class LogIn extends AppCompatActivity {
 
 
         logsignup.setOnClickListener(v -> {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+            logsignup.startAnimation(animation);
             Intent i = new Intent(getApplicationContext(), SignUp.class);
             startActivity(i);
             finish();
         });
         admin.setOnClickListener(v -> {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+            admin.startAnimation(animation);
             Intent i = new Intent(getApplicationContext(), Adminlogin.class);
             startActivity(i);
             finish();
@@ -102,6 +116,8 @@ public class LogIn extends AppCompatActivity {
 
     }
     public void Login(){
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+        logbtn.startAnimation(animation);
         etname = logname.getText().toString();
         etpass = logpass.getText().toString();
         Intent j = new Intent(getApplicationContext(),player_prof.class);

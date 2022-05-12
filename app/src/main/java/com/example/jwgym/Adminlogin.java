@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,6 +26,8 @@ public class Adminlogin extends AppCompatActivity {
         adcontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+                adcontinue.startAnimation(animation);
                 String p = adpw.getText().toString();
                 if(p.equals("123admin")){
                     Intent i =new Intent(getApplicationContext(), administration.class);
