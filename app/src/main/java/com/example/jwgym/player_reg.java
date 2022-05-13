@@ -3,8 +3,10 @@ package com.example.jwgym;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,24 +25,58 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_reg extends AppCompatActivity {
-    TextView username,status,payment,privateSession,cooosh;
-    Button btnreg;
+    TextView username,status,payment,privateSession,cooosh,textView2;
+    Button btnreg,cancelBtn;
     String n,p, Url = Test.getURL();
     public String currentDate;
     public int g;
-    String ID;
+    String ID,c_id;
+    //public String sal="false";
+
+
+
+
     int cost=200000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_reg);
+
         privateSession = findViewById(R.id.PrivateSession);
         username = findViewById(R.id.username);
         status = findViewById(R.id.status);
         payment = findViewById(R.id.payment);
         btnreg = findViewById(R.id.button);
         cooosh = findViewById(R.id.coachhh);
+        textView2 = findViewById(R.id.textView2);
+        cancelBtn = findViewById(R.id.cancelBtn);
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+
+
+
+            public void run(){
+                Intent j = getIntent();
+                cooosh.setText(j.getStringExtra("cname"));
+                // sal = Integer.parseInt((j.getStringExtra("salary")));
+
+
+
+                if(Test.getCouchState()=="false") {
+
+                    payment.setText(cost+"");
+                }
+                else{
+                    textView2.setVisibility(View.VISIBLE);
+                    c_id = j.getStringExtra("c_id");
+                    cost = cost+125000;
+                    payment.setText(cost+"");
+                }
+            }
+
+
+        },120);
 
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
@@ -52,10 +88,6 @@ public class player_reg extends AppCompatActivity {
         TextView date = findViewById(R.id.Textview);
         date.setText(currentDate);
 
-        Intent j = getIntent();
-        cooosh.setText(j.getStringExtra("cname"));
-
-        payment.setText(cost+j.getStringExtra("salary"));
 
 
 
@@ -102,6 +134,11 @@ public class player_reg extends AppCompatActivity {
     privateSession.setOnClickListener(v -> {
         Intent i = new Intent(getApplicationContext(),PrivateSession.class);
         startActivity(i);
+        finish();
+    });
+
+    cancelBtn.setOnClickListener(v -> {
+        //AlertDialog.
     });
 
 
@@ -112,7 +149,26 @@ public class player_reg extends AppCompatActivity {
 
 
     }
-   public void blockage(){
+/*
+    @Override
+    protected void onResume() {
+        Intent j = getIntent();
+        cooosh.setText(j.getStringExtra("cname"));
+       // sal = Integer.parseInt((j.getStringExtra("salary")));
+        while(sal=="false"){
+            payment.setText(sal);
+
+            sal = j.getStringExtra("salary");
+        }
+
+
+
+       // payment.setText(sal);
+
+        super.onResume();
+    }*/
+
+    public void blockage(){
         String url = Url+"/registration/blockedID.php?p_name="+n+"&p_password="+p;
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
@@ -149,7 +205,7 @@ public class player_reg extends AppCompatActivity {
 
     public void register(){
         String url = Url+"/registration/addplayer.php?date=" + currentDate + "&p_id=" + ID +
-                "&payment=" + payment.getText();
+                "&payment=" + cost+"&c_id="+c_id;
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         StringRequest request = new StringRequest(Request.Method.GET, url,

@@ -22,10 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -146,7 +143,7 @@ public class playerViewSched extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String value = response.trim();
-                Test.setId(value);
+                Test.setCouchState(value);
                 ID = value;
 
 
@@ -190,7 +187,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                Test.setId(value);
+                Test.setCouchState(value);
 
 
             }

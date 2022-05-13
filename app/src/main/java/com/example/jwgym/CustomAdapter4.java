@@ -1,7 +1,5 @@
 package com.example.jwgym;
 
-import static com.example.jwgym.Test.URL;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -11,14 +9,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +19,8 @@ public class CustomAdapter4 extends BaseAdapter {
     Context con;
     JSONArray data;
     LayoutInflater inflater;
+    String salary="true";
+
     // constructor
     public CustomAdapter4(Context c, JSONArray data){
         this.con = c;
@@ -75,14 +67,20 @@ public class CustomAdapter4 extends BaseAdapter {
             //holder.coachsp.setText(obj.getString("specilization"));
 
             holder.img.setTag(obj.getInt("c_id"));
+            String c_id = obj.getString("c_id");
 
             holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(con.getApplicationContext(),player_reg.class);
                     i.putExtra("cname",name);
-                    i.putExtra("salary",50000);
+                    i.putExtra("salary",salary);
+                    i.putExtra("c_id", c_id);
+                    Test.setCouchState(salary);
+
+
                     con.startActivity(i);
+
 
                 }
             });}

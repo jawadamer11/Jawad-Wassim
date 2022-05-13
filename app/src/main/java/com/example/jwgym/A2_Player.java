@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 public class A2_Player extends AppCompatActivity {
@@ -28,6 +27,7 @@ public class A2_Player extends AppCompatActivity {
             SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
+            Test.setCouchState("false");
             editor.putBoolean("hasLoggedIn",false);
             editor.clear();
             editor.commit();

@@ -53,8 +53,8 @@ TextView username, password, id_c, salary, spec;
             public void onResponse(String response) {
 
                 String value = response.trim();
-                Test.setId(value);
-                id_c.setText(Test.getId());
+                Test.setCouchState(value);
+                id_c.setText(Test.getCouchState());
                 ID=value;
 
 
@@ -95,8 +95,8 @@ TextView username, password, id_c, salary, spec;
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                Test.setId(value);
-                id_c.setText(Test.getId());
+                Test.setCouchState(value);
+                id_c.setText(Test.getCouchState());
 
 
 

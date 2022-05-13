@@ -5,21 +5,21 @@ import android.os.Bundle;
 
 public class Test extends AppCompatActivity {
     static String URL = "http://192.168.0.106/ceng495";
-    static String id ;
+    static String couchState ="false" ;
 
     public Test() {
     }
 
     public Test(String id) {
-        id = this.id;
+        id = this.couchState;
     }
 
-    public static String getId() {
-        return id;
+    public static String getCouchState() {
+        return couchState;
     }
 
-    public static void setId(String id) {
-        Test.id = id;
+    public static void setCouchState(String couchState) {
+        Test.couchState = couchState;
     }
 
     public static String getURL() {

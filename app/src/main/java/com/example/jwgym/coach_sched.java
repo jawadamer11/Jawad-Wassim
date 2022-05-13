@@ -64,9 +64,9 @@ public class coach_sched extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String value = response.trim();
-                Test.setId(value);
+                Test.setCouchState(value);
 
-                textView26.setText(Test.getId());
+                textView26.setText(Test.getCouchState());
                 ID=value;
 
             }

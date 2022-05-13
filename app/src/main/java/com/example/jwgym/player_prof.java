@@ -2,7 +2,6 @@ package com.example.jwgym;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -77,8 +76,8 @@ public class player_prof extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String value = response.trim();
-                Test.setId(value);
-                tvid.setText(Test.getId());
+                Test.setCouchState(value);
+                tvid.setText(Test.getCouchState());
                 ID=value;
 
                 getPname();
@@ -123,8 +122,8 @@ public class player_prof extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                Test.setId(value);
-                tvid.setText(Test.getId());
+                Test.setCouchState(value);
+                tvid.setText(Test.getCouchState());
 
 
 
