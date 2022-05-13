@@ -8,14 +8,18 @@
 
     <Spinner
         android:id="@+id/spinnerSpec"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="130dp"
+        android:background="@drawable/spinnerdesign"
         android:entries="@array/specilization"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="130dp" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout3"

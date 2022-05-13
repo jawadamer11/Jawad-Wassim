@@ -3,6 +3,8 @@ package com.example.jwgym;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -42,6 +44,8 @@ public class SignUp extends AppCompatActivity {
             finish();
         });
         signregister.setOnClickListener(v -> {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
+            signregister.startAnimation(animation);
             String name = signname.getText().toString();
             String height = signheight.getText().toString();
             String weight = signweight.getText().toString();

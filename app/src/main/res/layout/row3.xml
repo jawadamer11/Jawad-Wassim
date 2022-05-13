@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="session_time"
-        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/sessPID"
         app:layout_constraintTop_toBottomOf="@+id/sessPID" />
 
@@ -19,9 +20,10 @@
         android:id="@+id/sessdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="30dp"
         android:layout_marginTop="25dp"
         android:text="session_date"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/sesstime"
         app:layout_constraintTop_toBottomOf="@+id/sesstime" />
 
@@ -31,9 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
+        android:textSize="30dp"
         android:layout_marginTop="83dp"
         android:text="p_id"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

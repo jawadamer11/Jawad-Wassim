@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/k"
+    android:background="@drawable/img12"
     tools:context=".MainActivity">
 
 
@@ -14,9 +14,10 @@
         android:layout_height="116dp"
         android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="110dp"
         android:layout_marginEnd="150dp"
         android:layout_marginRight="150dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="190dp"
+        android:tint="@color/teal_200"
         app:srcCompat="@drawable/ic_baseline_fitness_center_24" />
 </RelativeLayout>

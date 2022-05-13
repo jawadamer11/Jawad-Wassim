@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/k"
     tools:context=".player_prof">
 
     <LinearLayout
@@ -27,15 +28,18 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Username:"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/username_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="25dp"
+                android:gravity="center"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textColor="#1AFF01" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,15 +53,18 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Password:"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/password_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="15dp"
+                android:gravity="center"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textColor="#FD0606"/>
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +78,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Type of Workout:"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/id_c"
@@ -79,7 +87,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -94,7 +104,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Age:"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/spec"
@@ -102,7 +113,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -117,7 +130,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Height"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/salary"
@@ -125,7 +139,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,7 +155,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Weight"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/weight"
@@ -147,7 +164,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="TextView"
-                android:textColor="@color/black" />
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -162,7 +181,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="TextView"
+                android:gravity="center"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 

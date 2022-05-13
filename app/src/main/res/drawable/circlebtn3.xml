@@ -2,18 +2,14 @@
 <shape xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid android:color="#9CCCEE" />
+    <solid android:color="#EE5BCA5D" />
 
     <corners
         tools:ignore="ExtraText"
-        android:topRightRadius="200dp"
-        android:topLeftRadius="90dp"
-        android:bottomRightRadius="200dp"
-        android:bottomLeftRadius="90dp"
-
+        android:topRightRadius="250dp"
+        android:bottomLeftRadius="250dp"
+        android:topLeftRadius="250dp"
+        android:bottomRightRadius="250dp"
 
         />
-
-
-
 </shape>
