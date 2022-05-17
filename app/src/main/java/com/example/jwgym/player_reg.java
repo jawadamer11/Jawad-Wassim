@@ -1,9 +1,11 @@
 package com.example.jwgym;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -134,11 +136,15 @@ public class player_reg extends AppCompatActivity {
     privateSession.setOnClickListener(v -> {
         Intent i = new Intent(getApplicationContext(),PrivateSession.class);
         startActivity(i);
-        finish();
+
     });
+
+
 
     cancelBtn.setOnClickListener(v -> {
-        //AlertDialog.
+        CreateAlertDialog();
+
+
     });
 
 
@@ -148,6 +154,42 @@ public class player_reg extends AppCompatActivity {
 
 
 
+    }
+
+    private void CreateAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you Sure of canceling Membership?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                cancelRegitration();
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+              //  Toast.makeText(getApplicationContext(),"asdgeas ",Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.create();
+        builder.show();
+    }
+
+    private void cancelRegitration() {
+
+        String url = Url+"/registration/cancelRegistration.php?p_id="+ID;
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest request = new StringRequest(Request.Method.GET, url,
+
+                response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
+
+                error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
+                    //pb.setVisibility(View.INVISIBLE);
+                }
+        );
+        queue.add(request);
     }
 /*
     @Override

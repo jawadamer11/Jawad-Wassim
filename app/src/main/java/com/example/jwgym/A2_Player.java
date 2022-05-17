@@ -1,8 +1,10 @@
 package com.example.jwgym;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -27,13 +29,32 @@ public class A2_Player extends AppCompatActivity {
             SharedPreferences sharedPreferences = getSharedPreferences(LogIn.PREFS_NAME,0);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
-            Test.setCouchState("false");
-            editor.putBoolean("hasLoggedIn",false);
-            editor.clear();
-            editor.commit();
-            Intent i = new Intent(getApplicationContext(),LogIn.class);
-            startActivity(i);
-            finish();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Do you want to Log Out?");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    Test.setCouchState("false");
+                    editor.putBoolean("hasLoggedIn",false);
+                    editor.clear();
+                    editor.commit();
+                    Intent i = new Intent(getApplicationContext(),LogIn.class);
+                    startActivity(i);
+                    finish();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //  Toast.makeText(getApplicationContext(),"asdgeas ",Toast.LENGTH_LONG).show();
+                }
+            });
+            builder.create();
+            builder.show();
+
+
         });
 
 
@@ -58,7 +79,7 @@ public class A2_Player extends AppCompatActivity {
         sched.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), player_sched.class);
             startActivity(i);
-            finish();
+            
         });
 
     }

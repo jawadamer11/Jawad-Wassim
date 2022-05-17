@@ -10,116 +10,24 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5sp">
-
-        <TextView
-            android:id="@+id/textView292"
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:layout_marginLeft="-10dp"
-            android:fontFamily="serif-monospace"
-            android:foregroundGravity="center"
-            android:gravity="center"
-            android:padding="7sp"
-            android:text="Days"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginEnd="10dp" />
-
-        <TextView
-            android:id="@+id/textView282"
-            android:layout_width="150dp"
-            android:layout_height="74dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="80dp"
-            android:fontFamily="serif-monospace"
-            android:foregroundGravity="center"
-            android:padding="7sp"
-            android:text="Session
-            Time"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="90dp" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="25sp"
 
         >
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="wrap_content"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
-            android:padding="7sp"
+            android:paddingRight="0dp"
             android:text="Monday"
             android:textColor="@color/teal_200"
             android:textSize="15sp"
             android:textStyle="italic" />
 
         <TextView
-
-            android:id="@+id/q1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:textColor="#E5EC88"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:padding="7sp"
-            android:text="TextView" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-10dp"
-        android:padding="25sp">
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:padding="7sp"
-            android:text="Tuesday"
-            android:textColor="@color/teal_200"
-            android:textSize="15sp"
-            android:textStyle="italic" />
-
-        <TextView
-
-            android:id="@+id/q2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:textStyle="bold"
-            android:textColor="#E5EC88"
-            android:gravity="center"
-            android:padding="7sp"
-            android:text="TextView" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-10dp"
-        android:padding="25sp">
-
-        <TextView
             android:id="@+id/textView32"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed-medium"
             android:padding="7sp"
             android:text="Wednesday"
@@ -128,17 +36,69 @@
             android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/textView30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="7sp"
+            android:text="Tuesday"
+            android:textColor="@color/teal_200"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-10dp"
+        android:padding="25sp">
+
+        <TextView
+
+            android:id="@+id/q2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:gravity="center"
+            android:padding="7sp"
+            android:text="Tues"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/q1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:gravity="center"
+            android:padding="7sp"
+            android:text="Mon"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-10dp"
+        android:padding="25sp">
+
+        <TextView
 
             android:id="@+id/q3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp"
-            android:padding="7sp"
-            android:textStyle="bold"
-            android:textColor="#E5EC88"
             android:gravity="center"
-            android:text="TextView" />
+            android:padding="7sp"
+            android:text="Wed"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow
@@ -165,11 +125,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp"
-            android:textColor="#E5EC88"
             android:gravity="center"
             android:padding="7sp"
-            android:textStyle="bold"
-            android:text="TextView" />
+            android:text="Thurs"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow
@@ -196,11 +156,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp"
-            android:padding="7sp"
-            android:textColor="#E5EC88"
             android:gravity="center"
-            android:textStyle="bold"
-            android:text="TextView" />
+            android:padding="7sp"
+            android:text="Fri"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow
@@ -228,11 +188,11 @@
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:textStyle="bold"
-            android:padding="7sp"
-            android:textColor="#E5EC88"
             android:gravity="center"
-            android:text="TextView" />
+            android:padding="7sp"
+            android:text="Sat"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow
@@ -257,13 +217,19 @@
             android:id="@+id/q7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:layout_marginStart="120dp"
             android:layout_marginLeft="120dp"
-            android:padding="7sp"
-            android:textColor="#E5EC88"
             android:gravity="center"
-            android:text="TextView" />
+            android:padding="7sp"
+            android:text="Sun"
+            android:textColor="#E5EC88"
+            android:textStyle="bold" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.constraint.ConstraintLayout>
     </TableRow>
 
 </TableLayout>
