@@ -68,7 +68,7 @@ public class CustomAdapter4 extends BaseAdapter {
 
             holder.img.setTag(obj.getInt("c_id"));
             String c_id = obj.getString("c_id");
-
+/////////////////////////////
             holder.img.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

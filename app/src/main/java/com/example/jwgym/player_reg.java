@@ -79,7 +79,7 @@ public class player_reg extends AppCompatActivity {
 
 
         },120);
-
+////////////////
 
         SharedPreferences sp = getApplicationContext().getSharedPreferences("userdetails", Context.MODE_PRIVATE);
         username.setText(sp.getString("username", ""));

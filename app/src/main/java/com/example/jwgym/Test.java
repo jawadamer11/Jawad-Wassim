@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Test extends AppCompatActivity {
-    static String URL = "http://192.168.0.106/ceng495";
+    static String URL = "http://192.168.0.107/ceng495";
     static String couchState ="false" ;
 
 
