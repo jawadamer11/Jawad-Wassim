@@ -7,6 +7,7 @@ public class Test extends AppCompatActivity {
     static String URL = "http://192.168.0.106/ceng495";
     static String couchState ="false" ;
 
+
     public Test() {
     }
 
