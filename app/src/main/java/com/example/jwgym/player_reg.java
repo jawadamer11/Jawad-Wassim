@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class player_reg extends AppCompatActivity {
+    LinearLayout layout;
     TextView username,status,payment,privateSession,cooosh,textView2;
     Button btnreg,cancelBtn;
     String n,p, Url = Test.getURL();
@@ -52,6 +54,8 @@ public class player_reg extends AppCompatActivity {
         cooosh = findViewById(R.id.coachhh);
         textView2 = findViewById(R.id.textView2);
         cancelBtn = findViewById(R.id.cancelBtn);
+        layout = findViewById(R.id.linearLayout);
+        layout.setVisibility(View.INVISIBLE);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -71,6 +75,7 @@ public class player_reg extends AppCompatActivity {
                 }
                 else{
                     textView2.setVisibility(View.VISIBLE);
+                    layout.setVisibility(View.VISIBLE);
                     c_id = j.getStringExtra("c_id");
                     cost = cost+125000;
                     payment.setText(cost+"");
@@ -227,7 +232,7 @@ public class player_reg extends AppCompatActivity {
             }
             else {
 
-                status.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+                status.setTextColor(getResources().getColor(R.color.teal_200));
                 status.setText("Allowed ");
                 g = 0;
 

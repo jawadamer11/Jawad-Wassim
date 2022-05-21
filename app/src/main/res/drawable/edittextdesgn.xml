@@ -6,10 +6,7 @@
 
     <corners
         tools:ignore="ExtraText"
-        android:topRightRadius="200dp"
-        android:topLeftRadius="90dp"
-        android:bottomRightRadius="200dp"
-        android:bottomLeftRadius="90dp"
+        android:radius="30dp"
 
 
         />

@@ -8,7 +8,7 @@
     tools:context=".coach_sched">
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/playerList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -29,7 +29,7 @@
         android:layout_marginBottom="35dp"
         android:textColor="@color/white"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/listview"
+        app:layout_constraintBottom_toTopOf="@+id/playerList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

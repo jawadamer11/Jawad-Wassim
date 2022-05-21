@@ -61,11 +61,11 @@ public class CustomAdapter1 extends BaseAdapter {
         holder.playeri = rowView.findViewById(R.id.playeri);
         holder.playerp = rowView.findViewById(R.id.playerp);
         holder.playern = rowView.findViewById(R.id.playern);
-        holder.playert = rowView.findViewById(R.id.playert);
+       // holder.playert = rowView.findViewById(R.id.playert);
         holder.playera = rowView.findViewById(R.id.playera);
-        holder.playerh = rowView.findViewById(R.id.playerh);
-        holder.playerw = rowView.findViewById(R.id.playerw);
-        holder.playerg = rowView.findViewById(R.id.playerg);
+       // holder.playerh = rowView.findViewById(R.id.playerh);
+       // holder.playerw = rowView.findViewById(R.id.playerw);
+       // holder.playerg = rowView.findViewById(R.id.playerg);
 
         holder.img = rowView.findViewById(R.id.imgt);
         holder.block= rowView.findViewById(R.id.block);

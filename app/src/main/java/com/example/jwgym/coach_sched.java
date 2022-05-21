@@ -24,9 +24,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class coach_sched extends AppCompatActivity {
-    ListView listview;
+    ListView listview5;
     JSONArray data;
-    CustomAdapter3 cust_adapater;
+    CustomAdapter5 cust_adapater;
     String ID;
     TextView textView26;
 
@@ -36,12 +36,12 @@ public class coach_sched extends AppCompatActivity {
         setContentView(R.layout.activity_coach_sched);
 
 
-        listview = findViewById(R.id.listview);
+        listview5 = findViewById(R.id.playerList);
         textView26 = findViewById(R.id.textView26);
 
         getID();
         getdatafromdb();
-        finish();
+        //finish();
 
     }
 
@@ -64,10 +64,10 @@ public class coach_sched extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String value = response.trim();
-                Test.setCouchState(value);
-
-                textView26.setText(Test.getCouchState());
+                textView26.setText(Test.getCoachID());
                 ID=value;
+                Test.setCoachID(value);
+
 
             }
         }, new Response.ErrorListener() {
@@ -88,24 +88,24 @@ public class coach_sched extends AppCompatActivity {
     }
 
     public void getdatafromdb(){
-
-        String url = URL+"/getPrivateSessions.php?c_id="+textView26.getText().toString();
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                //  data = response;
-                cust_adapater = new CustomAdapter3(getApplicationContext(),response);
-                listview.setAdapter(cust_adapater);
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO: Handle error
-                Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
-            }
-        });
+        String url =Test.getURL()+ "/coachSched/playerList.php?id=7";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
+                (Request.Method.GET, url, null, new
+                        Response.Listener<JSONArray>() {
+                            @Override
+                            public void onResponse(JSONArray response) {
+                                data = response;
+                                cust_adapater = new CustomAdapter5(coach_sched.this,data);
+                                listview5.setAdapter(cust_adapater);
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+// TODO: Handle error
+                        Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+                    }
+                });
         queue.add(jsonArrayRequest);
     }
 }

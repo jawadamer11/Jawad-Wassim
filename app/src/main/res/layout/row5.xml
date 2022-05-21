@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/edittextdesgn"
-    android:orientation="horizontal"
     android:padding="16dp">
 
     <LinearLayout
@@ -16,15 +16,16 @@
         android:paddingLeft="10dp">
 
         <TextView
-            android:id="@+id/coachname"
+            android:id="@+id/pname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/coachsalary"
+            android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -36,13 +37,13 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/btnchoose"
+        android:id="@+id/btnchoose1"
         android:layout_width="130dp"
         android:layout_height="72dp"
         android:layout_weight="1"
-        android:background="@drawable/imagedesign"
-        app:srcCompat="@drawable/ic_baseline_person_24"
-        tools:srcCompat="@drawable/ic_baseline_person_24" />
+        android:background="@android:color/holo_red_light"
+        app:srcCompat="@drawable/background_btn"
+        tools:srcCompat="@drawable/dumbell" />
 
 
 </LinearLayout>
