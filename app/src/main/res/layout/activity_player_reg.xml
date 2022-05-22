@@ -32,8 +32,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="username:"
+                android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/username2"
@@ -42,7 +43,9 @@
                 android:layout_marginBottom="10dp"
                 android:text="Status:"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:gravity="center"
+                android:textSize="18sp"
+                 />
 
             <TextView
                 android:id="@+id/username4"
@@ -51,7 +54,8 @@
                 android:layout_marginBottom="10dp"
                 android:text="1 Month membership:"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:gravity="center"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -68,7 +72,8 @@
                 android:layout_marginBottom="10dp"
                 android:text="username:"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:gravity="center"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/status"
@@ -77,8 +82,10 @@
                 android:layout_marginBottom="10dp"
                 android:background="#C1FFFFFF"
                 android:text="TextView"
+                android:gravity="center"
+                android:textSize="18sp"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,7 +99,8 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView38"
@@ -101,7 +109,8 @@
                     android:layout_weight="1"
                     android:text="L.L."
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:textSize="18sp" />
 
             </LinearLayout>
         </LinearLayout>

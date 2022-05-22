@@ -9,7 +9,7 @@
         android:id="@+id/tableLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="9dp"
+        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,19 +25,18 @@
                 android:layout_height="70dp"
                 android:gravity="center"
                 android:text="@string/monday"
-                android:textSize="20sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cname3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                 />
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -50,17 +49,17 @@
                 android:layout_width="172dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:text="@string/tuesday"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/csalaryc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
@@ -74,17 +73,17 @@
                 android:layout_width="172dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:text="@string/wednesday"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
@@ -107,9 +106,9 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
@@ -123,17 +122,17 @@
                 android:layout_width="172dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:textColor="@color/white"
                 android:text="@string/friday"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
@@ -155,10 +154,10 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
 
@@ -179,10 +178,10 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/white"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -200,11 +199,11 @@
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/buttondesign1"
+                android:background="@drawable/background_btn2"
                 android:gravity="center"
                 android:text="View" />
         </TableRow>
