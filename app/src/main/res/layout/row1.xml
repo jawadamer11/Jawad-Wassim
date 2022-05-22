@@ -126,6 +126,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
+        android:tint="@color/black"
         android:background="@drawable/imagedesign"
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
         app:layout_constraintEnd_toStartOf="@+id/tableLayout"

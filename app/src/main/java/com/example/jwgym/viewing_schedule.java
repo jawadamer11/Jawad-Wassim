@@ -63,7 +63,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Monday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -73,7 +73,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Tuesday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -83,7 +83,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Wednesday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -93,7 +93,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Thursday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -103,7 +103,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Friday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -113,7 +113,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Saturday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());
@@ -123,7 +123,7 @@ public class viewing_schedule extends AppCompatActivity {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "notif");
             builder.setContentTitle("Sunday Workout!!!");
             builder.setContentText("Are you ready for today's workout?");
-            builder.setSmallIcon(R.drawable.ic_launcher_background);
+            builder.setSmallIcon(R.drawable.dumbell);
             builder.setAutoCancel(true);
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getApplicationContext());
             managerCompat.notify(1, builder.build());

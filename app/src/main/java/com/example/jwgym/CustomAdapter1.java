@@ -35,7 +35,7 @@ public class CustomAdapter1 extends BaseAdapter {
     }
     public class Holder {
         TextView playern,playert,playeri,playera, playerw, playerh, playerg, playerp;
-        ImageView img, block;
+        ImageView img, block, imageView3;
     }
     @Override
     public int getCount() {
@@ -66,6 +66,7 @@ public class CustomAdapter1 extends BaseAdapter {
        // holder.playerh = rowView.findViewById(R.id.playerh);
        // holder.playerw = rowView.findViewById(R.id.playerw);
        // holder.playerg = rowView.findViewById(R.id.playerg);
+        holder.imageView3=rowView.findViewById(R.id.imageView3);
 
         holder.img = rowView.findViewById(R.id.imgt);
         holder.block= rowView.findViewById(R.id.block);
@@ -75,11 +76,11 @@ public class CustomAdapter1 extends BaseAdapter {
             holder.playeri.setText(obj.getString("p_id"));
             holder.playerp.setText(obj.getString("p_password"));
             holder.playern.setText(obj.getString("p_name"));
-            holder.playert.setText(obj.getString("typeOfWorkout"));
+            //holder.playert.setText(obj.getString("typeOfWorkout"));
             holder.playera.setText(obj.getString("age"));
-            holder.playerh.setText(obj.getString("height"));
-            holder.playerw.setText(obj.getString("weight"));
-            holder.playerg.setText(obj.getString("gender"));
+           // holder.playerh.setText(obj.getString("height"));
+           // holder.playerw.setText(obj.getString("weight"));
+            //holder.playerg.setText(obj.getString("gender"));
 
             holder.img.setTag(obj.getInt("p_id"));
             holder.block.setTag(obj.getInt("p_id"));

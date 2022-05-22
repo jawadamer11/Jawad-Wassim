@@ -36,7 +36,7 @@ public class CustomAdapter2 extends BaseAdapter {
     }
     public static class Holder {
         TextView coachn,coachsp,coachi,coachsa;
-        ImageView img;
+        ImageView img, imageview4;
     }
     @Override
     public int getCount() {
@@ -63,6 +63,7 @@ public class CustomAdapter2 extends BaseAdapter {
         holder.coachsp = rowView.findViewById(R.id.cspecial3);
         holder.coachsa = rowView.findViewById(R.id.ts);
         holder.img = rowView.findViewById(R.id.imgt);
+        holder.imageview4=rowView.findViewById(R.id.imageView4);
 
         JSONObject obj = data.optJSONObject(i);
         try {
