@@ -58,6 +58,8 @@ public class CustomAdapter4 extends BaseAdapter {
         holder.coachsa = rowView.findViewById(R.id.coachsalary);
         holder.img = rowView.findViewById(R.id.btnchoose);
 
+
+
         JSONObject obj = data.optJSONObject(i);
         try {
             holder.coachn.setText(obj.getString("c_name"));

@@ -62,6 +62,7 @@ public class player_reg extends AppCompatActivity {
 
 
 
+
             public void run(){
                 Intent j = getIntent();
                 cooosh.setText(j.getStringExtra("cname"));
