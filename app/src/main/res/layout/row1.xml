@@ -7,71 +7,56 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/block"
-        android:layout_width="35dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="#E65757"
-        android:foreground="@drawable/ic_baseline_lock_24"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toEndOf="@+id/tableLayout"
-        app:layout_constraintTop_toBottomOf="@+id/imgt"
-        app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/ic_baseline_lock_24" />
-
-    <ImageView
-        android:id="@+id/imgt"
-        android:layout_width="35dp"
-        android:layout_height="38dp"
-
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="#47D6E8"
-        android:foreground="@android:drawable/ic_menu_delete"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
-        app:layout_constraintStart_toEndOf="@+id/tableLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@android:drawable/screen_background_light_transparent" />
-
     <TableLayout
 
         android:id="@+id/tableLayout"
-        android:layout_width="160dp"
-        android:layout_height="131dp"
+        android:layout_width="208dp"
+        android:layout_height="165dp"
+        android:padding="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016">
+        app:layout_constraintVertical_bias="0.068">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:height="35dp"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="#C9CD5C" />
 
             <TextView
                 android:id="@+id/playern"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#5EB9FDEA"
+                android:layout_height="35dp"
+                android:background="#5E5AC852"
                 android:gravity="center"
                 android:text="@string/player_name"
-                android:textColor="#9811D1"
-                android:textSize="20dp" />
+                android:textColor="#EBE8EC"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ID"
+                android:textColor="#C9CD5C" />
 
             <TextView
                 android:id="@+id/playeri"
@@ -79,12 +64,21 @@
                 android:layout_height="40dp"
                 android:gravity="center"
                 android:text="@string/player_id"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="12dp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Age"
+                android:textColor="#C9CD5C" />
 
             <TextView
                 android:id="@+id/playera"
@@ -92,24 +86,21 @@
                 android:layout_height="40dp"
                 android:gravity="center"
                 android:text="@string/player_age"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="12dp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="64dp">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Password"
+                android:textColor="#C9CD5C" />
 
             <TextView
                 android:id="@+id/playerp"
@@ -117,7 +108,9 @@
                 android:layout_height="30dp"
                 android:gravity="center"
                 android:text="player Password"
-                android:textColor="#E61111" />
+                android:textColor="#EDE6E6"
+                android:textSize="12dp"
+                android:textStyle="italic" />
         </TableRow>
     </TableLayout>
 
@@ -125,15 +118,56 @@
         android:id="@+id/imageView3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:tint="@color/black"
         android:background="@drawable/imagedesign"
+        android:foreground="@drawable/ic_baseline_person_24"
+        android:tint="@color/black"
+
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
         app:layout_constraintEnd_toStartOf="@+id/tableLayout"
-        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.078"
+        app:layout_constraintVertical_bias="0.353"
         app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TableLayout
+        android:layout_width="105dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tableLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="101dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgt"
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+
+                android:layout_marginStart="12dp"
+
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/circlebtn"
+                android:foreground="@android:drawable/ic_menu_delete"
+                tools:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="17dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/block"
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+                android:background="@drawable/circlebtn1"
+                android:foreground="@drawable/ic_baseline_lock_24"
+                app:srcCompat="@drawable/ic_baseline_lock_24" />
+        </TableRow>
+
+    </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

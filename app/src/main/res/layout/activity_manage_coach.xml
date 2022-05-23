@@ -21,7 +21,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list1"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@android:drawable/ic_menu_add" />
+        android:tint="@color/black"
+        android:foreground="@drawable/dumbell"
+        app:backgroundTint="#B5BC56"
+         />
 
     <ListView
         android:id="@+id/list1"

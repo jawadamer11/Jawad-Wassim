@@ -119,8 +119,7 @@ public class CustomAdapter1 extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
 
-                    String url = URL+"/addToBlocked.php?p_id="+ID1+"&p_name="+holder.playern.getText()+
-                            "&p_password="+holder.playerp.getText()+"&reason= Payment Issues";
+                    String url = URL+"/addToBlocked.php?p_id="+ID1+"&p_name="+holder.playern.getText()+"&p_password="+holder.playerp.getText()+"&reason=" +"Payment Issues";
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
@@ -128,7 +127,7 @@ public class CustomAdapter1 extends BaseAdapter {
 
                             if(response=="success"){
                                 Toast.makeText(con.getApplicationContext(),
-                                        "player with ID:"+pid+" is deleted from the list",Toast.LENGTH_LONG).show();
+                                        "player with ID:"+pid+" is blocked from the registration",Toast.LENGTH_LONG).show();
 
                                 ((managePlayer)con).onResume();
                             }

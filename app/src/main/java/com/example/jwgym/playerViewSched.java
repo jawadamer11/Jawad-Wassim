@@ -259,7 +259,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx1.setText(value);
+                tx1.setText(value+" PM");
 
 
             }
@@ -294,7 +294,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx2.setText(value);
+                tx2.setText(value+" PM");
 
 
             }
@@ -329,7 +329,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx3.setText(value);
+                tx3.setText(value+" PM");
 
 
             }
@@ -364,7 +364,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx4.setText(value);
+                tx4.setText(value+" PM");
 
 
             }
@@ -399,7 +399,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx6.setText(value);
+                tx6.setText(value+" PM");
 
 
             }
@@ -434,7 +434,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx7.setText(value);
+                tx7.setText(value+" PM");
 
 
             }
@@ -469,7 +469,7 @@ public class playerViewSched extends AppCompatActivity {
 
                 String value = response.trim();
                 //Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
-                tx5.setText(value);
+                tx5.setText(value+" PM");
 
 
             }
