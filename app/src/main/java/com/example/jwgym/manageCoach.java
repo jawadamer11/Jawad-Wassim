@@ -32,7 +32,7 @@ public class manageCoach extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_coach);
 
-
+        //getdatafromdb();
         list1 = findViewById(R.id.list1);
         addco=findViewById(R.id.addco);
 
@@ -52,10 +52,6 @@ public class manageCoach extends AppCompatActivity {
     }
     @Override
     protected void onResume() {
-        getdatafromdb();
-        super.onResume();
-    }
-    public void getdatafromdb(){
         String url = URL+"/getallcoaches.php";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
@@ -68,5 +64,20 @@ public class manageCoach extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
                 });
         queue.add(jsonArrayRequest);
+        super.onResume();
     }
+   /* public void getdatafromdb(){
+        String url = URL+"/getallcoaches.php";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
+                (Request.Method.GET, url, null, response -> {
+                    data = response;
+                    cust_adapater1 = new CustomAdapter2(getApplicationContext(),data);
+                    list1.setAdapter(cust_adapater1);
+                }, error -> {
+                    // TODO: Handle error
+                    Toast.makeText(getApplicationContext(),"Error:"+error.toString(),Toast.LENGTH_SHORT).show();
+                });
+        queue.add(jsonArrayRequest);
+    }*/
 }

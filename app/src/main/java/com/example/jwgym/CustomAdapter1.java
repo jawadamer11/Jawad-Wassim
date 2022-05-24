@@ -83,43 +83,16 @@ public class CustomAdapter1 extends BaseAdapter {
             //holder.playerg.setText(obj.getString("gender"));
 
             holder.img.setTag(obj.getInt("p_id"));
-            holder.block.setTag(obj.getInt("p_id"));
+            //holder.block.setTag(obj.getInt("p_id"));
             int pid = (int) holder.img.getTag();
             String ID1 = pid+"";
-            holder.img.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    String url = URL+"/deletePlayer.php?p_id="+ID1;
-                    RequestQueue queue = Volley.newRequestQueue(con);
-                    StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-
-                            if(response=="success"){
-                                Toast.makeText(con.getApplicationContext(),
-                                        "player with ID:"+pid+" is deleted from the list",Toast.LENGTH_LONG).show();
-
-                                ((managePlayer)con).onResume();
-                            }
-                            else {
-                                Toast.makeText(con, "Delete failed.", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void
-                        onErrorResponse(VolleyError error) {
-                            Toast.makeText(con,"Error:"+error.toString(), Toast.LENGTH_SHORT).show(); }
-                    });queue.add(request);
-                }
-            });
 
             holder.block.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    String url = URL+"/addToBlocked.php?p_id="+ID1+"&p_name="+holder.playern.getText()+"&p_password="+holder.playerp.getText()+"&reason=" +"Payment Issues";
+                    String url = URL+"/addToBlocked.php?p_id="+ID1+"&p_name="+holder.playern.getText()+
+                            "&p_password="+holder.playerp.getText()+"&reason=" +"Payment Issues";
                     RequestQueue queue = Volley.newRequestQueue(con);
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                         @Override
@@ -139,14 +112,51 @@ public class CustomAdapter1 extends BaseAdapter {
                         @Override
                         public void
                         onErrorResponse(VolleyError error) {
+                            //Toast.makeText(con,"Error:"+error.toString(), Toast.LENGTH_SHORT).show();
+                              Toast.makeText(con, "Player blocked from registration", Toast.LENGTH_LONG).show();
+                        }
+
+                    });queue.add(request);
+                }
+            });
+
+
+            holder.img.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    String url = URL+"/deletePlayer.php?p_id="+ID1;
+                    RequestQueue queue = Volley.newRequestQueue(con);
+                    StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            if(response=="success"){
+                                Toast.makeText(con.getApplicationContext(),
+                                        "player with ID:"+pid+" is deleted from the list",Toast.LENGTH_LONG).show();
+
+                                ((managePlayer)con).onResume();
+                            }
+                            else {
+                                Toast.makeText(con, "Player Deleted.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void
+                        onErrorResponse(VolleyError error) {
                             Toast.makeText(con,"Error:"+error.toString(), Toast.LENGTH_SHORT).show(); }
                     });queue.add(request);
                 }
             });
+
+
         }
         catch (JSONException e){
         }
         return rowView;
     }
+
 }
 

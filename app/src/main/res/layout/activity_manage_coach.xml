@@ -8,23 +8,24 @@
     tools:context=".manageCoach">
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:clickable="true"
-        android:contentDescription="@string/administration"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list1"
-        tools:ignore="ImageContrastCheck"
-        android:tint="@color/black"
-        android:foreground="@drawable/dumbell"
-        app:backgroundTint="#B5BC56"
-         />
+    android:id="@+id/addco"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="4dp"
+    android:clickable="true"
+    android:contentDescription="@string/administration"
+    android:focusable="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/list1"
+    tools:ignore="ImageContrastCheck"
+    android:foreground="@drawable/dumbell"
+    android:tint="@color/black"
+    app:backgroundTint="#B5BC56"
+
+    />
 
     <ListView
         android:id="@+id/list1"

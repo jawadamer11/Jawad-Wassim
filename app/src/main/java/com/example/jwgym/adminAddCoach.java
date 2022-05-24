@@ -56,11 +56,14 @@ public class adminAddCoach extends AppCompatActivity {
                             "&salary=" + salary + "&c_password=" + pw;
 
                     RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                    StringRequest request = new StringRequest(Request.Method.GET, url, response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(), error -> {
+                    StringRequest request = new StringRequest(Request.Method.GET, url, response ->
+                            Toast.makeText(getApplicationContext(), "Coach ("+name+ ") added successfully", Toast.LENGTH_SHORT).show(), error -> {
                         Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
                         //pb.setVisibility(View.INVISIBLE);
                     }
                     );
+                    chname.setText("");
+                    chsalary.setText("");chpass.setText("");
                     queue.add(request);
                 }
             }

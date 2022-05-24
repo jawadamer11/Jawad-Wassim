@@ -22,8 +22,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout3"
-        android:layout_width="161dp"
-        android:layout_height="119dp"
+        android:layout_width="164dp"
+        android:layout_height="186dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +76,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="40dp">
 
             <TextView
                 android:id="@+id/ts"
@@ -94,13 +94,13 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/imagedesign"
+        android:foreground="@drawable/ic_baseline_person_24"
+        android:tint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="@+id/tableLayout3"
         app:layout_constraintEnd_toStartOf="@+id/tableLayout3"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.773"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:foreground="@drawable/ic_baseline_person_24"
-        app:layout_constraintVertical_bias="0.186"
-        android:tint="@color/teal_200"/>
+        app:layout_constraintVertical_bias="0.107" />
 
 </android.support.constraint.ConstraintLayout>

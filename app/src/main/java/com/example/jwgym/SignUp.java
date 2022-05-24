@@ -64,12 +64,15 @@ public class SignUp extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 StringRequest request = new StringRequest(Request.Method.GET, url,
 
-                        response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
+                        response -> Toast.makeText(getApplicationContext(), "Player ("+name+ ") added successfully", Toast.LENGTH_SHORT).show(),
 
                         error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
                             //pb.setVisibility(View.INVISIBLE);
                         }
+
                 );
+                signname.setText("");
+                signheight.setText("");signweight.setText("");signage.setText("");signpw.setText("");
                 queue.add(request);
             }
         });

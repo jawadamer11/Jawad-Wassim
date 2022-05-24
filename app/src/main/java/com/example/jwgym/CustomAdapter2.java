@@ -89,7 +89,7 @@ public class CustomAdapter2 extends BaseAdapter {
                                 ((manageCoach)con).onResume();
                             }
                             else {
-                                Toast.makeText(con, "Delete failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(con, "Coach Deleted", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }, new Response.ErrorListener() {
