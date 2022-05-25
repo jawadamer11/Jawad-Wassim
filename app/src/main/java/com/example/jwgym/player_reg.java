@@ -67,7 +67,7 @@ public class player_reg extends AppCompatActivity {
                 Intent j = getIntent();
                 cooosh.setText(j.getStringExtra("cname"));
                 // sal = Integer.parseInt((j.getStringExtra("salary")));
-
+                //c_id= j.getStringExtra("c_id");
 
 
                 if(Test.getCouchState()=="false") {

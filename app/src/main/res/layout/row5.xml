@@ -9,16 +9,16 @@
     android:padding="16dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="135dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:paddingLeft="10dp">
 
         <TextView
             android:id="@+id/pname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="174dp"
+            android:layout_height="61dp"
             android:layout_margin="5dp"
             android:textColor="@android:color/holo_blue_bright"
             android:textSize="20sp"
@@ -26,8 +26,8 @@
 
         <TextView
             android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="173dp"
+            android:layout_height="49dp"
             android:layout_margin="5dp"
             android:textColor="#FFE72929"
             android:textSize="15sp"
@@ -35,15 +35,6 @@
 
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/btnchoose1"
-        android:layout_width="130dp"
-        android:layout_height="72dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_red_light"
-        app:srcCompat="@drawable/background_btn"
-        tools:srcCompat="@drawable/dumbell" />
 
 
 </LinearLayout>

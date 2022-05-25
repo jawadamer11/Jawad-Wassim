@@ -56,12 +56,12 @@ public class CustomAdapter5 extends BaseAdapter {
         // holder.coachi = rowView.findViewById(R.id.coachi);
         //holder.coachsp = rowView.findViewById(R.id.cspecial3);
         holder.age = rowView.findViewById(R.id.age);
-        holder.img = rowView.findViewById(R.id.btnchoose1);
+        //holder.img = rowView.findViewById(R.id.btnchoose1);
 
         JSONObject obj = data.optJSONObject(i);
         try {
             holder.pname.setText(obj.getString("p_name"));
-            String pname = obj.getString("p_name");
+            //String pname = obj.getString("p_name");
             // holder.coachi.setText(obj.getString("c_id"));
             holder.age.setText(obj.getString("age"));
             //holder.coachsp.setText(obj.getString("specilization"));
@@ -69,10 +69,10 @@ public class CustomAdapter5 extends BaseAdapter {
           //  holder.img.setTag(obj.getInt("c_id"));
           //  String c_id = obj.getString("c_id");
 /////////////////////////////
-            holder.img.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(con.getApplicationContext(),player_reg.class);
+           // holder.img.setOnClickListener(new View.OnClickListener() {
+              //  @Override
+               // public void onClick(View view) {
+                 //   Intent i = new Intent(con.getApplicationContext(),player_reg.class);
                  //   i.putExtra("cname",name);
                  //   i.putExtra("salary",salary);
                  //   i.putExtra("c_id", c_id);
@@ -82,8 +82,8 @@ public class CustomAdapter5 extends BaseAdapter {
                   //  con.startActivity(i);
 
 
-                }
-            });}
+
+           }
         catch (JSONException e){
         }
         return rowView;
