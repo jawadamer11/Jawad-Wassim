@@ -29,7 +29,7 @@ public class Adminlogin extends AppCompatActivity {
                 Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sample_anim);
                 adcontinue.startAnimation(animation);
                 String p = adpw.getText().toString();
-                if(p.equals("123admin")){
+                if(p.equals("12")){
                     Intent i =new Intent(getApplicationContext(), administration.class);
                     startActivity(i);
                     finish();
