@@ -27,7 +27,6 @@ public class PrivateSession extends AppCompatActivity  {
     ArrayList<String> coachList = new ArrayList<>();
     ArrayAdapter<String> specAdapter,coachAdapter;
     RequestQueue requestQueue;
-
     ListView list1;
     JSONArray data;
     CustomAdapter4 cust_adapater;

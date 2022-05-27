@@ -225,7 +225,7 @@ public class player_sched extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 StringRequest request = new StringRequest(Request.Method.GET, url,
 
-                        response -> Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show(),
+                        response -> Toast.makeText(getApplicationContext(), "Schedule Saved, you will receive a reminder everyday you have workout!", Toast.LENGTH_SHORT).show(),
 
                         error -> { Toast.makeText(getApplicationContext(), "Error:" + error.toString(), Toast.LENGTH_SHORT).show();
                             //pb.setVisibility(View.INVISIBLE);
