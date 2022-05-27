@@ -88,7 +88,7 @@ public class coach_sched extends AppCompatActivity {
     }
 
     public void getdatafromdb(){
-        String url =Test.getURL()+ "/coachSched/playerList.php?id="+ID;
+        String url =Test.getURL()+ "/coachSched/playerList.php?id=7";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url, null, new

@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/edittextdesgn"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -27,24 +28,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Username:"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Username:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/username_c"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="25dp"
+                android:background="#C1FFFFFF"
                 android:gravity="center"
                 android:text="TextView"
-                android:textColor="#1AFF01" />
+                android:textColor="#01C4FF"
+                android:textSize="25dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="40dp"
             android:orientation="horizontal">
 
             <TextView
@@ -52,24 +55,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Password:"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Password:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/password_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="15dp"
                 android:gravity="center"
                 android:text="TextView"
-                android:textColor="#FD0606"/>
+                android:textColor="#FD0606"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -77,25 +81,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Type of Workout:"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Type of Workout:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/id_c"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -103,25 +108,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Age:"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Age:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/spec"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -129,24 +135,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Height"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Height"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/salary"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -154,26 +161,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Weight"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="Weight"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/weight"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:gravity="center"
-                android:textColor="@color/white" />
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
-
 
 
             <TextView
@@ -181,12 +188,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TextView"
                 android:gravity="center"
-                android:textColor="@color/white"/>
+                android:text="TextView"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edittextdesgn"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:text="Player Profile"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
